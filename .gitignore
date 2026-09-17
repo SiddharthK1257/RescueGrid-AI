@@ -1,17 +1,27 @@
 # Dependencies
 node_modules/
 client/node_modules/
+next_app/node_modules/
+backend_venv/
+.venv/
 package-lock.json
 
 # Environment Variables & Secrets
 .env
 .env.*
 !.env.example
+!**/.env.example
 
 # Production Builds
 dist/
 client/dist/
+next_app/.next/
 build/
+
+# Python & Testing
+__pycache__/
+*.pyc
+.pytest_cache/
 
 # Logs
 logs/

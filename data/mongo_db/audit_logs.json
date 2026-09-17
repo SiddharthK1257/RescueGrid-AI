@@ -1,0 +1,440 @@
+[
+  {
+    "logId": "LOG-54A4D9B9",
+    "incidentId": "RG-2026-0001",
+    "actor": "SYSTEM:ORCHESTRATOR",
+    "action": "PIPELINE_STARTED",
+    "summary": "Multi-agent collaborative cycle triggered: System Bootstrap Initialization",
+    "timestamp": "2026-09-17T14:15:31.416131",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-DC6A2B0D",
+    "incidentId": "RG-2026-0001",
+    "actor": "AGENT:COMMANDER",
+    "action": "PLAN_PROPOSED_v1",
+    "summary": "Commander formulated Response Plan v1: Rapid extrication, primary casualty triage, and corridor stabilization.",
+    "timestamp": "2026-09-17T14:15:39.865568",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-76E5DFD3",
+    "incidentId": "RG-2026-0001",
+    "actor": "SYSTEM:SIMULATION",
+    "action": "SCENARIO_LOADED",
+    "summary": "Flagship Hackathon Scenario initialized (RG-2026-0001)",
+    "timestamp": "2026-09-17T14:16:35.897887",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-BEBA9437",
+    "incidentId": "RG-2026-0001",
+    "actor": "SYSTEM:ORCHESTRATOR",
+    "action": "PIPELINE_STARTED",
+    "summary": "Multi-agent collaborative cycle triggered: Initial Flagship Simulation Pipeline Execution",
+    "timestamp": "2026-09-17T14:16:35.898649",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-376D1AF9",
+    "incidentId": "RG-2026-0001",
+    "actor": "AGENT:COMMANDER",
+    "action": "PLAN_PROPOSED_v2",
+    "summary": "Commander formulated Response Plan v2: Contain active vehicle fire and redirect incoming units via North Service Road corridor.",
+    "timestamp": "2026-09-17T14:16:44.777276",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-074620C4",
+    "incidentId": "RG-2026-0001",
+    "actor": "HUMAN:Operator_Alpha",
+    "action": "PLAN_APPROVED",
+    "summary": "Operator Operator_Alpha plan approved for Plan v2 (Notes: Verified safe staging area with local dispatch.)",
+    "timestamp": "2026-09-17T14:16:44.996898",
+    "metadata": {
+      "version": 2,
+      "approved": true
+    }
+  },
+  {
+    "logId": "LOG-C64C1892",
+    "incidentId": "RG-2026-0001",
+    "actor": "HUMAN:OPERATOR",
+    "action": "UPDATE_INJECTED_SIMULATION",
+    "summary": "Simulation update injected: Fire is now reported in one vehicle, and the primary access lane is blocked.",
+    "timestamp": "2026-09-17T14:16:45.004592",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-E03EB11E",
+    "incidentId": "RG-2026-0001",
+    "actor": "SYSTEM:ORCHESTRATOR",
+    "action": "PIPELINE_STARTED",
+    "summary": "Multi-agent collaborative cycle triggered: Reassessment from injected update: Fire is now reported in one vehicle, and the primary access lane is blocked.",
+    "timestamp": "2026-09-17T14:16:45.006088",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-A4DAC797",
+    "incidentId": "RG-2026-0001",
+    "actor": "AGENT:COMMANDER",
+    "action": "PLAN_PROPOSED_v3",
+    "summary": "Commander formulated Response Plan v3: Contain active vehicle fire and redirect incoming units via North Service Road corridor.",
+    "timestamp": "2026-09-17T14:16:54.219043",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-B62C8D49",
+    "incidentId": "RG-2026-0001",
+    "actor": "SYSTEM:SIMULATION",
+    "action": "SCENARIO_LOADED",
+    "summary": "Flagship Hackathon Scenario initialized (RG-2026-0001)",
+    "timestamp": "2026-09-17T14:22:33.511085",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-9DFD0ECE",
+    "incidentId": "RG-2026-0001",
+    "actor": "SYSTEM:ORCHESTRATOR",
+    "action": "PIPELINE_STARTED",
+    "summary": "Multi-agent collaborative cycle triggered: Initial Flagship Simulation Pipeline Execution",
+    "timestamp": "2026-09-17T14:22:33.511085",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-6A4F10CC",
+    "incidentId": "RG-2026-0001",
+    "actor": "AGENT:COMMANDER",
+    "action": "PLAN_PROPOSED_v4",
+    "summary": "Commander formulated Response Plan v4: Contain active vehicle fire and redirect incoming units via North Service Road corridor.",
+    "timestamp": "2026-09-17T14:22:42.080410",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-E6E7525F",
+    "incidentId": "RG-2026-0001",
+    "actor": "HUMAN:Operator_Alpha",
+    "action": "PLAN_APPROVED",
+    "summary": "Operator Operator_Alpha plan approved for Plan v4 (Notes: Verified safe staging area with local dispatch.)",
+    "timestamp": "2026-09-17T14:22:42.233321",
+    "metadata": {
+      "version": 4,
+      "approved": true
+    }
+  },
+  {
+    "logId": "LOG-73277033",
+    "incidentId": "RG-2026-0001",
+    "actor": "HUMAN:OPERATOR",
+    "action": "UPDATE_INJECTED_SIMULATION",
+    "summary": "Simulation update injected: Fire is now reported in one vehicle, and the primary access lane is blocked.",
+    "timestamp": "2026-09-17T14:22:42.242549",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-6818409C",
+    "incidentId": "RG-2026-0001",
+    "actor": "SYSTEM:ORCHESTRATOR",
+    "action": "PIPELINE_STARTED",
+    "summary": "Multi-agent collaborative cycle triggered: Reassessment from injected update: Fire is now reported in one vehicle, and the primary access lane is blocked.",
+    "timestamp": "2026-09-17T14:22:42.244240",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-0B5D248A",
+    "incidentId": "RG-2026-0001",
+    "actor": "AGENT:COMMANDER",
+    "action": "PLAN_PROPOSED_v5",
+    "summary": "Commander formulated Response Plan v5: Contain active vehicle fire and redirect incoming units via North Service Road corridor.",
+    "timestamp": "2026-09-17T14:22:50.526605",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-1147A5CF",
+    "incidentId": "RG-2026-0001",
+    "actor": "SYSTEM:SIMULATION",
+    "action": "SCENARIO_LOADED",
+    "summary": "Flagship Hackathon Scenario initialized (RG-2026-0001)",
+    "timestamp": "2026-09-17T14:26:57.781984",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-D95FF14C",
+    "incidentId": "RG-2026-0001",
+    "actor": "SYSTEM:ORCHESTRATOR",
+    "action": "PIPELINE_STARTED",
+    "summary": "Multi-agent collaborative cycle triggered: Initial Flagship Simulation Pipeline Execution",
+    "timestamp": "2026-09-17T14:26:57.782738",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-75DA4620",
+    "incidentId": "RG-2026-0001",
+    "actor": "AGENT:COMMANDER",
+    "action": "PLAN_PROPOSED_v6",
+    "summary": "Commander formulated Response Plan v6: Contain active vehicle fire and redirect incoming units via North Service Road corridor.",
+    "timestamp": "2026-09-17T14:27:06.506475",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-268A5EFA",
+    "incidentId": "RG-2026-0001",
+    "actor": "HUMAN:Operator_Alpha",
+    "action": "PLAN_APPROVED",
+    "summary": "Operator Operator_Alpha plan approved for Plan v6 (Notes: Verified safe staging area with local dispatch.)",
+    "timestamp": "2026-09-17T14:27:06.657540",
+    "metadata": {
+      "version": 6,
+      "approved": true
+    }
+  },
+  {
+    "logId": "LOG-517AECC9",
+    "incidentId": "RG-2026-0001",
+    "actor": "HUMAN:OPERATOR",
+    "action": "UPDATE_INJECTED_SIMULATION",
+    "summary": "Simulation update injected: Fire is now reported in one vehicle, and the primary access lane is blocked.",
+    "timestamp": "2026-09-17T14:27:06.667154",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-B9252BBD",
+    "incidentId": "RG-2026-0001",
+    "actor": "SYSTEM:ORCHESTRATOR",
+    "action": "PIPELINE_STARTED",
+    "summary": "Multi-agent collaborative cycle triggered: Reassessment from injected update: Fire is now reported in one vehicle, and the primary access lane is blocked.",
+    "timestamp": "2026-09-17T14:27:06.668239",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-16F787B9",
+    "incidentId": "RG-2026-0001",
+    "actor": "AGENT:COMMANDER",
+    "action": "PLAN_PROPOSED_v7",
+    "summary": "Commander formulated Response Plan v7: Contain active vehicle fire and redirect incoming units via North Service Road corridor.",
+    "timestamp": "2026-09-17T14:27:15.144812",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-63076331",
+    "incidentId": "RG-2026-0001",
+    "actor": "SYSTEM:SIMULATION",
+    "action": "SCENARIO_LOADED",
+    "summary": "Flagship Hackathon Scenario initialized (RG-2026-0001)",
+    "timestamp": "2026-09-17T14:28:32.946801",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-BA9C6C9D",
+    "incidentId": "RG-2026-0001",
+    "actor": "SYSTEM:ORCHESTRATOR",
+    "action": "PIPELINE_STARTED",
+    "summary": "Multi-agent collaborative cycle triggered: Initial Flagship Simulation Pipeline Execution",
+    "timestamp": "2026-09-17T14:28:32.947895",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-6AD3DFD2",
+    "incidentId": "RG-2026-0001",
+    "actor": "AGENT:COMMANDER",
+    "action": "PLAN_PROPOSED_v8",
+    "summary": "Commander formulated Response Plan v8: Contain active vehicle fire and redirect incoming units via North Service Road corridor.",
+    "timestamp": "2026-09-17T14:28:41.504435",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-B00D07FD",
+    "incidentId": "RG-2026-0001",
+    "actor": "HUMAN:Operator_Alpha",
+    "action": "PLAN_APPROVED",
+    "summary": "Operator Operator_Alpha plan approved for Plan v8 (Notes: Verified safe staging area with local dispatch.)",
+    "timestamp": "2026-09-17T14:28:41.669722",
+    "metadata": {
+      "version": 8,
+      "approved": true
+    }
+  },
+  {
+    "logId": "LOG-72704706",
+    "incidentId": "RG-2026-0001",
+    "actor": "HUMAN:OPERATOR",
+    "action": "UPDATE_INJECTED_SIMULATION",
+    "summary": "Simulation update injected: Fire is now reported in one vehicle, and the primary access lane is blocked.",
+    "timestamp": "2026-09-17T14:28:41.681416",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-F5E21DBB",
+    "incidentId": "RG-2026-0001",
+    "actor": "SYSTEM:ORCHESTRATOR",
+    "action": "PIPELINE_STARTED",
+    "summary": "Multi-agent collaborative cycle triggered: Reassessment from injected update: Fire is now reported in one vehicle, and the primary access lane is blocked.",
+    "timestamp": "2026-09-17T14:28:41.682930",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-76757B65",
+    "incidentId": "RG-2026-0001",
+    "actor": "AGENT:COMMANDER",
+    "action": "PLAN_PROPOSED_v9",
+    "summary": "Commander formulated Response Plan v9: Contain active vehicle fire and redirect incoming units via North Service Road corridor.",
+    "timestamp": "2026-09-17T14:28:49.638445",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-AB9372D9",
+    "incidentId": "RG-2026-0001",
+    "actor": "SYSTEM:SIMULATION",
+    "action": "SCENARIO_LOADED",
+    "summary": "Flagship Hackathon Scenario initialized (RG-2026-0001)",
+    "timestamp": "2026-09-17T14:29:27.916512",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-896C6C44",
+    "incidentId": "RG-2026-0001",
+    "actor": "SYSTEM:ORCHESTRATOR",
+    "action": "PIPELINE_STARTED",
+    "summary": "Multi-agent collaborative cycle triggered: Initial Flagship Simulation Pipeline Execution",
+    "timestamp": "2026-09-17T14:29:27.918085",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-70AA4BF8",
+    "incidentId": "RG-2026-0001",
+    "actor": "AGENT:COMMANDER",
+    "action": "PLAN_PROPOSED_v10",
+    "summary": "Commander formulated Response Plan v10: Contain active vehicle fire and redirect incoming units via North Service Road corridor.",
+    "timestamp": "2026-09-17T14:29:36.243714",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-291E0AA8",
+    "incidentId": "RG-2026-0001",
+    "actor": "HUMAN:Operator_Alpha",
+    "action": "PLAN_APPROVED",
+    "summary": "Operator Operator_Alpha plan approved for Plan v10 (Notes: Verified safe staging area with local dispatch.)",
+    "timestamp": "2026-09-17T14:29:36.389635",
+    "metadata": {
+      "version": 10,
+      "approved": true
+    }
+  },
+  {
+    "logId": "LOG-60BBC976",
+    "incidentId": "RG-2026-0001",
+    "actor": "HUMAN:OPERATOR",
+    "action": "UPDATE_INJECTED_SIMULATION",
+    "summary": "Simulation update injected: Fire is now reported in one vehicle, and the primary access lane is blocked.",
+    "timestamp": "2026-09-17T14:29:36.398948",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-4E16E740",
+    "incidentId": "RG-2026-0001",
+    "actor": "SYSTEM:ORCHESTRATOR",
+    "action": "PIPELINE_STARTED",
+    "summary": "Multi-agent collaborative cycle triggered: Reassessment from injected update: Fire is now reported in one vehicle, and the primary access lane is blocked.",
+    "timestamp": "2026-09-17T14:29:36.400723",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-2C07D7C7",
+    "incidentId": "RG-2026-0001",
+    "actor": "AGENT:COMMANDER",
+    "action": "PLAN_PROPOSED_v11",
+    "summary": "Commander formulated Response Plan v11: Contain active vehicle fire and redirect incoming units via North Service Road corridor.",
+    "timestamp": "2026-09-17T14:29:44.582720",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-RG-2026-0002-INIT",
+    "incidentId": "RG-2026-0002",
+    "actor": "SYSTEM:ORCHESTRATOR",
+    "action": "INCIDENT_INITIALIZED",
+    "summary": "Incident RG-2026-0002 ingested with Plan v1 and tactical coordinates.",
+    "timestamp": "2026-09-17T14:16:01.015252",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-RG-2026-0003-INIT",
+    "incidentId": "RG-2026-0003",
+    "actor": "SYSTEM:ORCHESTRATOR",
+    "action": "INCIDENT_INITIALIZED",
+    "summary": "Incident RG-2026-0003 ingested with Plan v1 and tactical coordinates.",
+    "timestamp": "2026-09-17T14:16:01.021598",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-RG-2026-0004-INIT",
+    "incidentId": "RG-2026-0004",
+    "actor": "SYSTEM:ORCHESTRATOR",
+    "action": "INCIDENT_INITIALIZED",
+    "summary": "Incident RG-2026-0004 ingested with Plan v1 and tactical coordinates.",
+    "timestamp": "2026-09-17T14:16:01.027626",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-11B124A9",
+    "incidentId": "SYSTEM",
+    "actor": "Chief Sarah Jenkins",
+    "action": "USER_LOGIN",
+    "summary": "Personnel authenticated via JWT: Chief Sarah Jenkins (COMMANDER_OPERATOR)",
+    "timestamp": "2026-09-17T14:16:21.484636",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-BD91EDA3",
+    "incidentId": "SYSTEM",
+    "actor": "Chief Sarah Jenkins",
+    "action": "USER_LOGIN",
+    "summary": "Personnel authenticated via JWT: Chief Sarah Jenkins (COMMANDER_OPERATOR)",
+    "timestamp": "2026-09-17T14:22:25.732447",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-5EAE4A7D",
+    "incidentId": "SYSTEM",
+    "actor": "Chief Sarah Jenkins",
+    "action": "USER_LOGIN",
+    "summary": "Personnel authenticated via JWT: Chief Sarah Jenkins (COMMANDER_OPERATOR)",
+    "timestamp": "2026-09-17T14:27:15.372612",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-B5FEE1B8",
+    "incidentId": "SYSTEM",
+    "actor": "Lt. Test Operator",
+    "action": "USER_REGISTER",
+    "summary": "New personnel registered: Lt. Test Operator (DISPATCHER)",
+    "timestamp": "2026-09-17T14:27:15.599011",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-A4D9DEAC",
+    "incidentId": "SYSTEM",
+    "actor": "Chief Sarah Jenkins",
+    "action": "USER_LOGIN",
+    "summary": "Personnel authenticated via JWT: Chief Sarah Jenkins (COMMANDER_OPERATOR)",
+    "timestamp": "2026-09-17T14:28:49.882217",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-368CE1AD",
+    "incidentId": "SYSTEM",
+    "actor": "Chief Sarah Jenkins",
+    "action": "USER_LOGIN",
+    "summary": "Personnel authenticated via JWT: Chief Sarah Jenkins (COMMANDER_OPERATOR)",
+    "timestamp": "2026-09-17T14:29:44.814949",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-385A93DE",
+    "incidentId": "SYSTEM",
+    "actor": "Lt. Test Operator",
+    "action": "USER_REGISTER",
+    "summary": "New personnel registered: Lt. Test Operator (DISPATCHER)",
+    "timestamp": "2026-09-17T14:29:45.045844",
+    "metadata": {}
+  }
+]

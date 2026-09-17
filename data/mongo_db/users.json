@@ -1,0 +1,62 @@
+[
+  {
+    "userId": "usr-commander-01",
+    "name": "Chief Sarah Jenkins",
+    "email": "commander@rescuegrid.ai",
+    "passwordHash": "$2b$12$HLyoUTtaJNUSZVy.NCp8H.INvN.0LspMDXas7S0oIgRDWEzrvzQjy",
+    "role": "COMMANDER_OPERATOR",
+    "department": "Incident Command Post (Sector Alpha)",
+    "badgeNumber": "CMD-9001",
+    "createdAt": "2026-09-17T14:16:00.349989"
+  },
+  {
+    "userId": "usr-dispatcher-02",
+    "name": "Marcus Vance",
+    "email": "dispatcher@rescuegrid.ai",
+    "passwordHash": "$2b$12$0NJDYCcvuE5ILOseykncvuI3D8CzDN3MFxyz43f7pBugNKSFbUu/i",
+    "role": "DISPATCHER",
+    "department": "Regional 911 Emergency Communications",
+    "badgeNumber": "DSP-4420",
+    "createdAt": "2026-09-17T14:16:00.570532"
+  },
+  {
+    "userId": "usr-fieldlead-03",
+    "name": "Capt. Elena Rostova",
+    "email": "fieldlead@rescuegrid.ai",
+    "passwordHash": "$2b$12$DVIZwS.W5EXIKyEi306Hne2JYfsuXv0iYMMus4NeanDbjkjcdQ1BK",
+    "role": "FIELD_LEAD",
+    "department": "Heavy Extrication & HazMat Taskforce",
+    "badgeNumber": "FLD-7782",
+    "createdAt": "2026-09-17T14:16:00.789397"
+  },
+  {
+    "userId": "usr-medical-04",
+    "name": "Dr. Aris Thorne",
+    "email": "medical@rescuegrid.ai",
+    "passwordHash": "$2b$12$EmKwiNEgpY67D9fVDJN0z.EMIUoZ55ezEo/QsGi0ae81lRdaJpwlW",
+    "role": "COMMANDER_OPERATOR",
+    "department": "Trauma & Emergency Medical Services",
+    "badgeNumber": "MED-1109",
+    "createdAt": "2026-09-17T14:16:01.009984"
+  },
+  {
+    "userId": "usr-1789635435-73a0",
+    "name": "Lt. Test Operator",
+    "email": "test.operator@rescuegrid.ai",
+    "passwordHash": "$2b$12$uE.nhi.huBaCc2rBu9xjbu24TlBdCjCTuz5gXRBdo5EF/FHyDr69G",
+    "role": "DISPATCHER",
+    "department": "Emergency Communications Division",
+    "badgeNumber": "RG-C4E2",
+    "createdAt": "2026-09-17T14:27:15.599011"
+  },
+  {
+    "userId": "usr-1789635585-55f0",
+    "name": "Lt. Test Operator",
+    "email": "test.operator.e96b9e@rescuegrid.ai",
+    "passwordHash": "$2b$12$pz1v94DynuVkTxw6c0Vzue1LBaTBKt/e8l.b.erOv7lNtEnl/3TmO",
+    "role": "DISPATCHER",
+    "department": "Emergency Communications Division",
+    "badgeNumber": "RG-F507",
+    "createdAt": "2026-09-17T14:29:45.045088"
+  }
+]

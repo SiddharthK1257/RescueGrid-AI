@@ -1,0 +1,894 @@
+[
+  {
+    "planId": "PLAN-RG-2026-0001-v1",
+    "incidentId": "RG-2026-0001",
+    "version": 1,
+    "actions": [
+      {
+        "id": "ACT-v1-1",
+        "title": "Deploy Heavy Extrication Cutters to Vehicle 1 & 2",
+        "agent": "RESCUE",
+        "priority": "CRITICAL",
+        "description": "Perform roof removal and door spreading to extract trapped non-ambulatory occupants.",
+        "estimatedTime": "5 - 8 min",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v1-2",
+        "title": "Establish Advanced Life Support Triage Base",
+        "agent": "MEDICAL",
+        "priority": "HIGH",
+        "description": "Set up Red/Yellow/Green sorting station at Staging Area Alpha.",
+        "estimatedTime": "4 min",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v1-3",
+        "title": "Highway Patrol Traffic Diversion at Exit 41",
+        "agent": "TRAFFIC",
+        "priority": "HIGH",
+        "description": "Divert civilian vehicles upstream to preserve shoulder for inbound emergency units.",
+        "estimatedTime": "3 min",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v1-4",
+        "title": "Stage 3 ALS Ambulances & 1 Water Pumper",
+        "agent": "RESOURCE",
+        "priority": "HIGH",
+        "description": "Position response apparatus in ordered queue at staging apron.",
+        "estimatedTime": "6 min",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v1-5",
+        "title": "Issue Initial Press & Emergency Services SITREP",
+        "agent": "COMMUNICATION",
+        "priority": "MEDIUM",
+        "description": "Publish factual incident summary to regional trauma network and dispatch.",
+        "estimatedTime": "Immediate",
+        "requiresApproval": false,
+        "approved": false
+      }
+    ],
+    "rationale": "Initial Plan v1 synthesized from concurrent assessments across 6 specialized agents. High-impact deceleration collision with multiple potential trapped occupants.",
+    "primaryObjective": "Rapid extrication, primary casualty triage, and corridor stabilization.",
+    "uncertainties": [
+      "Non-ambulatory victim count pending on-scene responder physical survey.",
+      "Live traffic tailback queue length upstream."
+    ],
+    "createdBy": "COMMANDER_AGENT",
+    "status": "PROPOSED",
+    "approvedBy": null,
+    "approvalNotes": null,
+    "createdAt": "2026-09-17T14:15:39.863331"
+  },
+  {
+    "planId": "PLAN-RG-2026-0001-v2",
+    "incidentId": "RG-2026-0001",
+    "version": 2,
+    "actions": [
+      {
+        "id": "ACT-v2-1",
+        "title": "Establish North Service Road Emergency Corridor",
+        "agent": "TRAFFIC",
+        "priority": "CRITICAL",
+        "description": "Reroute incoming ALS ambulances via Exit 42B North bypass due to confirmed main lane obstruction.",
+        "estimatedTime": "Immediate (2 min)",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v2-2",
+        "title": "Deploy Class B Foam Fire Suppression",
+        "agent": "RESCUE",
+        "priority": "CRITICAL",
+        "description": "Suppress active vehicle fire before initiating hydraulic extrication to safeguard victims.",
+        "estimatedTime": "3 - 5 min",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v2-3",
+        "title": "Expand Perimeter and Re-triage Red-Tier Casualties",
+        "agent": "MEDICAL",
+        "priority": "HIGH",
+        "description": "Relocate triage area to 150m upwind buffer zone due to thermal and smoke drift.",
+        "estimatedTime": "5 min",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v2-4",
+        "title": "Dispatch Secondary Mutual Aid Pumper Unit",
+        "agent": "RESOURCE",
+        "priority": "HIGH",
+        "description": "Mobilize auxiliary water supply tender to back up primary attack line.",
+        "estimatedTime": "8 - 12 min",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v2-5",
+        "title": "Broadcast Urgent Highway Detour SITREP",
+        "agent": "COMMUNICATION",
+        "priority": "MEDIUM",
+        "description": "Update traffic advisory radio and navigation services regarding total corridor shutdown.",
+        "estimatedTime": "Immediate",
+        "requiresApproval": false,
+        "approved": false
+      }
+    ],
+    "rationale": "Plan v2 triggered by: Initial Flagship Simulation Pipeline Execution. Fire escalation and primary lane blockage necessitate immediate rerouting of ambulances and heavy foam suppression attack.",
+    "primaryObjective": "Contain active vehicle fire and redirect incoming units via North Service Road corridor.",
+    "uncertainties": [
+      "Structural integrity of burned vehicle compartment before extrication.",
+      "Exact clearance time for blocked highway lanes."
+    ],
+    "createdBy": "COMMANDER_AGENT",
+    "status": "APPROVED",
+    "approvedBy": "Operator_Alpha",
+    "approvalNotes": "Verified safe staging area with local dispatch.",
+    "createdAt": "2026-09-17T14:16:44.769513"
+  },
+  {
+    "planId": "PLAN-RG-2026-0001-v3",
+    "incidentId": "RG-2026-0001",
+    "version": 3,
+    "actions": [
+      {
+        "id": "ACT-v3-1",
+        "title": "Establish North Service Road Emergency Corridor",
+        "agent": "TRAFFIC",
+        "priority": "CRITICAL",
+        "description": "Reroute incoming ALS ambulances via Exit 42B North bypass due to confirmed main lane obstruction.",
+        "estimatedTime": "Immediate (2 min)",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v3-2",
+        "title": "Deploy Class B Foam Fire Suppression",
+        "agent": "RESCUE",
+        "priority": "CRITICAL",
+        "description": "Suppress active vehicle fire before initiating hydraulic extrication to safeguard victims.",
+        "estimatedTime": "3 - 5 min",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v3-3",
+        "title": "Expand Perimeter and Re-triage Red-Tier Casualties",
+        "agent": "MEDICAL",
+        "priority": "HIGH",
+        "description": "Relocate triage area to 150m upwind buffer zone due to thermal and smoke drift.",
+        "estimatedTime": "5 min",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v3-4",
+        "title": "Dispatch Secondary Mutual Aid Pumper Unit",
+        "agent": "RESOURCE",
+        "priority": "HIGH",
+        "description": "Mobilize auxiliary water supply tender to back up primary attack line.",
+        "estimatedTime": "8 - 12 min",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v3-5",
+        "title": "Broadcast Urgent Highway Detour SITREP",
+        "agent": "COMMUNICATION",
+        "priority": "MEDIUM",
+        "description": "Update traffic advisory radio and navigation services regarding total corridor shutdown.",
+        "estimatedTime": "Immediate",
+        "requiresApproval": false,
+        "approved": false
+      }
+    ],
+    "rationale": "Plan v3 triggered by: Reassessment from injected update: Fire is now reported in one vehicle, and the primary access lane is blocked.. Fire escalation and primary lane blockage necessitate immediate rerouting of ambulances and heavy foam suppression attack.",
+    "primaryObjective": "Contain active vehicle fire and redirect incoming units via North Service Road corridor.",
+    "uncertainties": [
+      "Structural integrity of burned vehicle compartment before extrication.",
+      "Exact clearance time for blocked highway lanes."
+    ],
+    "createdBy": "COMMANDER_AGENT",
+    "status": "PROPOSED",
+    "approvedBy": null,
+    "approvalNotes": null,
+    "createdAt": "2026-09-17T14:16:54.215636"
+  },
+  {
+    "planId": "PLAN-RG-2026-0001-v4",
+    "incidentId": "RG-2026-0001",
+    "version": 4,
+    "actions": [
+      {
+        "id": "ACT-v4-1",
+        "title": "Establish North Service Road Emergency Corridor",
+        "agent": "TRAFFIC",
+        "priority": "CRITICAL",
+        "description": "Reroute incoming ALS ambulances via Exit 42B North bypass due to confirmed main lane obstruction.",
+        "estimatedTime": "Immediate (2 min)",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v4-2",
+        "title": "Deploy Class B Foam Fire Suppression",
+        "agent": "RESCUE",
+        "priority": "CRITICAL",
+        "description": "Suppress active vehicle fire before initiating hydraulic extrication to safeguard victims.",
+        "estimatedTime": "3 - 5 min",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v4-3",
+        "title": "Expand Perimeter and Re-triage Red-Tier Casualties",
+        "agent": "MEDICAL",
+        "priority": "HIGH",
+        "description": "Relocate triage area to 150m upwind buffer zone due to thermal and smoke drift.",
+        "estimatedTime": "5 min",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v4-4",
+        "title": "Dispatch Secondary Mutual Aid Pumper Unit",
+        "agent": "RESOURCE",
+        "priority": "HIGH",
+        "description": "Mobilize auxiliary water supply tender to back up primary attack line.",
+        "estimatedTime": "8 - 12 min",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v4-5",
+        "title": "Broadcast Urgent Highway Detour SITREP",
+        "agent": "COMMUNICATION",
+        "priority": "MEDIUM",
+        "description": "Update traffic advisory radio and navigation services regarding total corridor shutdown.",
+        "estimatedTime": "Immediate",
+        "requiresApproval": false,
+        "approved": false
+      }
+    ],
+    "rationale": "Plan v4 triggered by: Initial Flagship Simulation Pipeline Execution. Fire escalation and primary lane blockage necessitate immediate rerouting of ambulances and heavy foam suppression attack.",
+    "primaryObjective": "Contain active vehicle fire and redirect incoming units via North Service Road corridor.",
+    "uncertainties": [
+      "Structural integrity of burned vehicle compartment before extrication.",
+      "Exact clearance time for blocked highway lanes."
+    ],
+    "createdBy": "COMMANDER_AGENT",
+    "status": "APPROVED",
+    "approvedBy": "Operator_Alpha",
+    "approvalNotes": "Verified safe staging area with local dispatch.",
+    "createdAt": "2026-09-17T14:22:42.076659"
+  },
+  {
+    "planId": "PLAN-RG-2026-0001-v5",
+    "incidentId": "RG-2026-0001",
+    "version": 5,
+    "actions": [
+      {
+        "id": "ACT-v5-1",
+        "title": "Establish North Service Road Emergency Corridor",
+        "agent": "TRAFFIC",
+        "priority": "CRITICAL",
+        "description": "Reroute incoming ALS ambulances via Exit 42B North bypass due to confirmed main lane obstruction.",
+        "estimatedTime": "Immediate (2 min)",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v5-2",
+        "title": "Deploy Class B Foam Fire Suppression",
+        "agent": "RESCUE",
+        "priority": "CRITICAL",
+        "description": "Suppress active vehicle fire before initiating hydraulic extrication to safeguard victims.",
+        "estimatedTime": "3 - 5 min",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v5-3",
+        "title": "Expand Perimeter and Re-triage Red-Tier Casualties",
+        "agent": "MEDICAL",
+        "priority": "HIGH",
+        "description": "Relocate triage area to 150m upwind buffer zone due to thermal and smoke drift.",
+        "estimatedTime": "5 min",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v5-4",
+        "title": "Dispatch Secondary Mutual Aid Pumper Unit",
+        "agent": "RESOURCE",
+        "priority": "HIGH",
+        "description": "Mobilize auxiliary water supply tender to back up primary attack line.",
+        "estimatedTime": "8 - 12 min",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v5-5",
+        "title": "Broadcast Urgent Highway Detour SITREP",
+        "agent": "COMMUNICATION",
+        "priority": "MEDIUM",
+        "description": "Update traffic advisory radio and navigation services regarding total corridor shutdown.",
+        "estimatedTime": "Immediate",
+        "requiresApproval": false,
+        "approved": false
+      }
+    ],
+    "rationale": "Plan v5 triggered by: Reassessment from injected update: Fire is now reported in one vehicle, and the primary access lane is blocked.. Fire escalation and primary lane blockage necessitate immediate rerouting of ambulances and heavy foam suppression attack.",
+    "primaryObjective": "Contain active vehicle fire and redirect incoming units via North Service Road corridor.",
+    "uncertainties": [
+      "Structural integrity of burned vehicle compartment before extrication.",
+      "Exact clearance time for blocked highway lanes."
+    ],
+    "createdBy": "COMMANDER_AGENT",
+    "status": "PROPOSED",
+    "approvedBy": null,
+    "approvalNotes": null,
+    "createdAt": "2026-09-17T14:22:50.522206"
+  },
+  {
+    "planId": "PLAN-RG-2026-0001-v6",
+    "incidentId": "RG-2026-0001",
+    "version": 6,
+    "actions": [
+      {
+        "id": "ACT-v6-1",
+        "title": "Establish North Service Road Emergency Corridor",
+        "agent": "TRAFFIC",
+        "priority": "CRITICAL",
+        "description": "Reroute incoming ALS ambulances via Exit 42B North bypass due to confirmed main lane obstruction.",
+        "estimatedTime": "Immediate (2 min)",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v6-2",
+        "title": "Deploy Class B Foam Fire Suppression",
+        "agent": "RESCUE",
+        "priority": "CRITICAL",
+        "description": "Suppress active vehicle fire before initiating hydraulic extrication to safeguard victims.",
+        "estimatedTime": "3 - 5 min",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v6-3",
+        "title": "Expand Perimeter and Re-triage Red-Tier Casualties",
+        "agent": "MEDICAL",
+        "priority": "HIGH",
+        "description": "Relocate triage area to 150m upwind buffer zone due to thermal and smoke drift.",
+        "estimatedTime": "5 min",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v6-4",
+        "title": "Dispatch Secondary Mutual Aid Pumper Unit",
+        "agent": "RESOURCE",
+        "priority": "HIGH",
+        "description": "Mobilize auxiliary water supply tender to back up primary attack line.",
+        "estimatedTime": "8 - 12 min",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v6-5",
+        "title": "Broadcast Urgent Highway Detour SITREP",
+        "agent": "COMMUNICATION",
+        "priority": "MEDIUM",
+        "description": "Update traffic advisory radio and navigation services regarding total corridor shutdown.",
+        "estimatedTime": "Immediate",
+        "requiresApproval": false,
+        "approved": false
+      }
+    ],
+    "rationale": "Plan v6 triggered by: Initial Flagship Simulation Pipeline Execution. Fire escalation and primary lane blockage necessitate immediate rerouting of ambulances and heavy foam suppression attack.",
+    "primaryObjective": "Contain active vehicle fire and redirect incoming units via North Service Road corridor.",
+    "uncertainties": [
+      "Structural integrity of burned vehicle compartment before extrication.",
+      "Exact clearance time for blocked highway lanes."
+    ],
+    "createdBy": "COMMANDER_AGENT",
+    "status": "APPROVED",
+    "approvedBy": "Operator_Alpha",
+    "approvalNotes": "Verified safe staging area with local dispatch.",
+    "createdAt": "2026-09-17T14:27:06.501374"
+  },
+  {
+    "planId": "PLAN-RG-2026-0001-v7",
+    "incidentId": "RG-2026-0001",
+    "version": 7,
+    "actions": [
+      {
+        "id": "ACT-v7-1",
+        "title": "Establish North Service Road Emergency Corridor",
+        "agent": "TRAFFIC",
+        "priority": "CRITICAL",
+        "description": "Reroute incoming ALS ambulances via Exit 42B North bypass due to confirmed main lane obstruction.",
+        "estimatedTime": "Immediate (2 min)",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v7-2",
+        "title": "Deploy Class B Foam Fire Suppression",
+        "agent": "RESCUE",
+        "priority": "CRITICAL",
+        "description": "Suppress active vehicle fire before initiating hydraulic extrication to safeguard victims.",
+        "estimatedTime": "3 - 5 min",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v7-3",
+        "title": "Expand Perimeter and Re-triage Red-Tier Casualties",
+        "agent": "MEDICAL",
+        "priority": "HIGH",
+        "description": "Relocate triage area to 150m upwind buffer zone due to thermal and smoke drift.",
+        "estimatedTime": "5 min",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v7-4",
+        "title": "Dispatch Secondary Mutual Aid Pumper Unit",
+        "agent": "RESOURCE",
+        "priority": "HIGH",
+        "description": "Mobilize auxiliary water supply tender to back up primary attack line.",
+        "estimatedTime": "8 - 12 min",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v7-5",
+        "title": "Broadcast Urgent Highway Detour SITREP",
+        "agent": "COMMUNICATION",
+        "priority": "MEDIUM",
+        "description": "Update traffic advisory radio and navigation services regarding total corridor shutdown.",
+        "estimatedTime": "Immediate",
+        "requiresApproval": false,
+        "approved": false
+      }
+    ],
+    "rationale": "Plan v7 triggered by: Reassessment from injected update: Fire is now reported in one vehicle, and the primary access lane is blocked.. Fire escalation and primary lane blockage necessitate immediate rerouting of ambulances and heavy foam suppression attack.",
+    "primaryObjective": "Contain active vehicle fire and redirect incoming units via North Service Road corridor.",
+    "uncertainties": [
+      "Structural integrity of burned vehicle compartment before extrication.",
+      "Exact clearance time for blocked highway lanes."
+    ],
+    "createdBy": "COMMANDER_AGENT",
+    "status": "PROPOSED",
+    "approvedBy": null,
+    "approvalNotes": null,
+    "createdAt": "2026-09-17T14:27:15.139782"
+  },
+  {
+    "planId": "PLAN-RG-2026-0001-v8",
+    "incidentId": "RG-2026-0001",
+    "version": 8,
+    "actions": [
+      {
+        "id": "ACT-v8-1",
+        "title": "Establish North Service Road Emergency Corridor",
+        "agent": "TRAFFIC",
+        "priority": "CRITICAL",
+        "description": "Reroute incoming ALS ambulances via Exit 42B North bypass due to confirmed main lane obstruction.",
+        "estimatedTime": "Immediate (2 min)",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v8-2",
+        "title": "Deploy Class B Foam Fire Suppression",
+        "agent": "RESCUE",
+        "priority": "CRITICAL",
+        "description": "Suppress active vehicle fire before initiating hydraulic extrication to safeguard victims.",
+        "estimatedTime": "3 - 5 min",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v8-3",
+        "title": "Expand Perimeter and Re-triage Red-Tier Casualties",
+        "agent": "MEDICAL",
+        "priority": "HIGH",
+        "description": "Relocate triage area to 150m upwind buffer zone due to thermal and smoke drift.",
+        "estimatedTime": "5 min",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v8-4",
+        "title": "Dispatch Secondary Mutual Aid Pumper Unit",
+        "agent": "RESOURCE",
+        "priority": "HIGH",
+        "description": "Mobilize auxiliary water supply tender to back up primary attack line.",
+        "estimatedTime": "8 - 12 min",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v8-5",
+        "title": "Broadcast Urgent Highway Detour SITREP",
+        "agent": "COMMUNICATION",
+        "priority": "MEDIUM",
+        "description": "Update traffic advisory radio and navigation services regarding total corridor shutdown.",
+        "estimatedTime": "Immediate",
+        "requiresApproval": false,
+        "approved": false
+      }
+    ],
+    "rationale": "Plan v8 triggered by: Initial Flagship Simulation Pipeline Execution. Fire escalation and primary lane blockage necessitate immediate rerouting of ambulances and heavy foam suppression attack.",
+    "primaryObjective": "Contain active vehicle fire and redirect incoming units via North Service Road corridor.",
+    "uncertainties": [
+      "Structural integrity of burned vehicle compartment before extrication.",
+      "Exact clearance time for blocked highway lanes."
+    ],
+    "createdBy": "COMMANDER_AGENT",
+    "status": "APPROVED",
+    "approvedBy": "Operator_Alpha",
+    "approvalNotes": "Verified safe staging area with local dispatch.",
+    "createdAt": "2026-09-17T14:28:41.498562"
+  },
+  {
+    "planId": "PLAN-RG-2026-0001-v9",
+    "incidentId": "RG-2026-0001",
+    "version": 9,
+    "actions": [
+      {
+        "id": "ACT-v9-1",
+        "title": "Establish North Service Road Emergency Corridor",
+        "agent": "TRAFFIC",
+        "priority": "CRITICAL",
+        "description": "Reroute incoming ALS ambulances via Exit 42B North bypass due to confirmed main lane obstruction.",
+        "estimatedTime": "Immediate (2 min)",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v9-2",
+        "title": "Deploy Class B Foam Fire Suppression",
+        "agent": "RESCUE",
+        "priority": "CRITICAL",
+        "description": "Suppress active vehicle fire before initiating hydraulic extrication to safeguard victims.",
+        "estimatedTime": "3 - 5 min",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v9-3",
+        "title": "Expand Perimeter and Re-triage Red-Tier Casualties",
+        "agent": "MEDICAL",
+        "priority": "HIGH",
+        "description": "Relocate triage area to 150m upwind buffer zone due to thermal and smoke drift.",
+        "estimatedTime": "5 min",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v9-4",
+        "title": "Dispatch Secondary Mutual Aid Pumper Unit",
+        "agent": "RESOURCE",
+        "priority": "HIGH",
+        "description": "Mobilize auxiliary water supply tender to back up primary attack line.",
+        "estimatedTime": "8 - 12 min",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v9-5",
+        "title": "Broadcast Urgent Highway Detour SITREP",
+        "agent": "COMMUNICATION",
+        "priority": "MEDIUM",
+        "description": "Update traffic advisory radio and navigation services regarding total corridor shutdown.",
+        "estimatedTime": "Immediate",
+        "requiresApproval": false,
+        "approved": false
+      }
+    ],
+    "rationale": "Plan v9 triggered by: Reassessment from injected update: Fire is now reported in one vehicle, and the primary access lane is blocked.. Fire escalation and primary lane blockage necessitate immediate rerouting of ambulances and heavy foam suppression attack.",
+    "primaryObjective": "Contain active vehicle fire and redirect incoming units via North Service Road corridor.",
+    "uncertainties": [
+      "Structural integrity of burned vehicle compartment before extrication.",
+      "Exact clearance time for blocked highway lanes."
+    ],
+    "createdBy": "COMMANDER_AGENT",
+    "status": "PROPOSED",
+    "approvedBy": null,
+    "approvalNotes": null,
+    "createdAt": "2026-09-17T14:28:49.633197"
+  },
+  {
+    "planId": "PLAN-RG-2026-0001-v10",
+    "incidentId": "RG-2026-0001",
+    "version": 10,
+    "actions": [
+      {
+        "id": "ACT-v10-1",
+        "title": "Establish North Service Road Emergency Corridor",
+        "agent": "TRAFFIC",
+        "priority": "CRITICAL",
+        "description": "Reroute incoming ALS ambulances via Exit 42B North bypass due to confirmed main lane obstruction.",
+        "estimatedTime": "Immediate (2 min)",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v10-2",
+        "title": "Deploy Class B Foam Fire Suppression",
+        "agent": "RESCUE",
+        "priority": "CRITICAL",
+        "description": "Suppress active vehicle fire before initiating hydraulic extrication to safeguard victims.",
+        "estimatedTime": "3 - 5 min",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v10-3",
+        "title": "Expand Perimeter and Re-triage Red-Tier Casualties",
+        "agent": "MEDICAL",
+        "priority": "HIGH",
+        "description": "Relocate triage area to 150m upwind buffer zone due to thermal and smoke drift.",
+        "estimatedTime": "5 min",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v10-4",
+        "title": "Dispatch Secondary Mutual Aid Pumper Unit",
+        "agent": "RESOURCE",
+        "priority": "HIGH",
+        "description": "Mobilize auxiliary water supply tender to back up primary attack line.",
+        "estimatedTime": "8 - 12 min",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v10-5",
+        "title": "Broadcast Urgent Highway Detour SITREP",
+        "agent": "COMMUNICATION",
+        "priority": "MEDIUM",
+        "description": "Update traffic advisory radio and navigation services regarding total corridor shutdown.",
+        "estimatedTime": "Immediate",
+        "requiresApproval": false,
+        "approved": false
+      }
+    ],
+    "rationale": "Plan v10 triggered by: Initial Flagship Simulation Pipeline Execution. Fire escalation and primary lane blockage necessitate immediate rerouting of ambulances and heavy foam suppression attack.",
+    "primaryObjective": "Contain active vehicle fire and redirect incoming units via North Service Road corridor.",
+    "uncertainties": [
+      "Structural integrity of burned vehicle compartment before extrication.",
+      "Exact clearance time for blocked highway lanes."
+    ],
+    "createdBy": "COMMANDER_AGENT",
+    "status": "APPROVED",
+    "approvedBy": "Operator_Alpha",
+    "approvalNotes": "Verified safe staging area with local dispatch.",
+    "createdAt": "2026-09-17T14:29:36.239687"
+  },
+  {
+    "planId": "PLAN-RG-2026-0001-v11",
+    "incidentId": "RG-2026-0001",
+    "version": 11,
+    "actions": [
+      {
+        "id": "ACT-v11-1",
+        "title": "Establish North Service Road Emergency Corridor",
+        "agent": "TRAFFIC",
+        "priority": "CRITICAL",
+        "description": "Reroute incoming ALS ambulances via Exit 42B North bypass due to confirmed main lane obstruction.",
+        "estimatedTime": "Immediate (2 min)",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v11-2",
+        "title": "Deploy Class B Foam Fire Suppression",
+        "agent": "RESCUE",
+        "priority": "CRITICAL",
+        "description": "Suppress active vehicle fire before initiating hydraulic extrication to safeguard victims.",
+        "estimatedTime": "3 - 5 min",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v11-3",
+        "title": "Expand Perimeter and Re-triage Red-Tier Casualties",
+        "agent": "MEDICAL",
+        "priority": "HIGH",
+        "description": "Relocate triage area to 150m upwind buffer zone due to thermal and smoke drift.",
+        "estimatedTime": "5 min",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v11-4",
+        "title": "Dispatch Secondary Mutual Aid Pumper Unit",
+        "agent": "RESOURCE",
+        "priority": "HIGH",
+        "description": "Mobilize auxiliary water supply tender to back up primary attack line.",
+        "estimatedTime": "8 - 12 min",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v11-5",
+        "title": "Broadcast Urgent Highway Detour SITREP",
+        "agent": "COMMUNICATION",
+        "priority": "MEDIUM",
+        "description": "Update traffic advisory radio and navigation services regarding total corridor shutdown.",
+        "estimatedTime": "Immediate",
+        "requiresApproval": false,
+        "approved": false
+      }
+    ],
+    "rationale": "Plan v11 triggered by: Reassessment from injected update: Fire is now reported in one vehicle, and the primary access lane is blocked.. Fire escalation and primary lane blockage necessitate immediate rerouting of ambulances and heavy foam suppression attack.",
+    "primaryObjective": "Contain active vehicle fire and redirect incoming units via North Service Road corridor.",
+    "uncertainties": [
+      "Structural integrity of burned vehicle compartment before extrication.",
+      "Exact clearance time for blocked highway lanes."
+    ],
+    "createdBy": "COMMANDER_AGENT",
+    "status": "PROPOSED",
+    "approvedBy": null,
+    "approvalNotes": null,
+    "createdAt": "2026-09-17T14:29:44.577484"
+  },
+  {
+    "planId": "PLAN-RG-2026-0002-v1",
+    "incidentId": "RG-2026-0002",
+    "version": 1,
+    "actions": [
+      {
+        "id": "ACT-RG-2026-0002-1",
+        "title": "Deploy Primary Tactical Sector Units",
+        "agent": "RESCUE",
+        "priority": "CRITICAL",
+        "description": "Establish hot and warm safety perimeters around Bayview Industrial Park, Tank Battery 4.",
+        "estimatedTime": "3 - 5 min",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-RG-2026-0002-2",
+        "title": "Establish Advanced Life Support Triage Station",
+        "agent": "MEDICAL",
+        "priority": "HIGH",
+        "description": "Deploy triage collection point and prepare transport ambulances.",
+        "estimatedTime": "4 min",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-RG-2026-0002-3",
+        "title": "Perimeter Access Corridor & Diversion",
+        "agent": "TRAFFIC",
+        "priority": "HIGH",
+        "description": "Implement emergency corridor ingress and divert non-essential traffic.",
+        "estimatedTime": "3 min",
+        "requiresApproval": true,
+        "approved": false
+      }
+    ],
+    "rationale": "Initial Plan v1 synthesized from concurrent multi-agent domain assessment.",
+    "primaryObjective": "Corridor containment, casualty triage, and rapid mitigation for Metro Industrial Chemical Vapor Leak.",
+    "uncertainties": [
+      "Exact non-ambulatory casualty count pending inner perimeter survey.",
+      "Live traffic tailback queue length upstream."
+    ],
+    "createdBy": "COMMANDER_AGENT",
+    "status": "PROPOSED",
+    "approvedBy": null,
+    "approvalNotes": null,
+    "createdAt": "2026-09-17T14:16:01.014502"
+  },
+  {
+    "planId": "PLAN-RG-2026-0003-v1",
+    "incidentId": "RG-2026-0003",
+    "version": 1,
+    "actions": [
+      {
+        "id": "ACT-RG-2026-0003-1",
+        "title": "Deploy Primary Tactical Sector Units",
+        "agent": "RESCUE",
+        "priority": "CRITICAL",
+        "description": "Establish hot and warm safety perimeters around 580 Market Street (Floor 14-16).",
+        "estimatedTime": "3 - 5 min",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-RG-2026-0003-2",
+        "title": "Establish Advanced Life Support Triage Station",
+        "agent": "MEDICAL",
+        "priority": "HIGH",
+        "description": "Deploy triage collection point and prepare transport ambulances.",
+        "estimatedTime": "4 min",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-RG-2026-0003-3",
+        "title": "Perimeter Access Corridor & Diversion",
+        "agent": "TRAFFIC",
+        "priority": "HIGH",
+        "description": "Implement emergency corridor ingress and divert non-essential traffic.",
+        "estimatedTime": "3 min",
+        "requiresApproval": true,
+        "approved": false
+      }
+    ],
+    "rationale": "Initial Plan v1 synthesized from concurrent multi-agent domain assessment.",
+    "primaryObjective": "Corridor containment, casualty triage, and rapid mitigation for 4th-Alarm Downtown Commercial High-Rise Fire.",
+    "uncertainties": [
+      "Exact non-ambulatory casualty count pending inner perimeter survey.",
+      "Live traffic tailback queue length upstream."
+    ],
+    "createdBy": "COMMANDER_AGENT",
+    "status": "PROPOSED",
+    "approvedBy": null,
+    "approvalNotes": null,
+    "createdAt": "2026-09-17T14:16:01.020087"
+  },
+  {
+    "planId": "PLAN-RG-2026-0004-v1",
+    "incidentId": "RG-2026-0004",
+    "version": 1,
+    "actions": [
+      {
+        "id": "ACT-RG-2026-0004-1",
+        "title": "Deploy Primary Tactical Sector Units",
+        "agent": "RESCUE",
+        "priority": "CRITICAL",
+        "description": "Establish hot and warm safety perimeters around River Valley Crossing at Lower Mill Road.",
+        "estimatedTime": "3 - 5 min",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-RG-2026-0004-2",
+        "title": "Establish Advanced Life Support Triage Station",
+        "agent": "MEDICAL",
+        "priority": "HIGH",
+        "description": "Deploy triage collection point and prepare transport ambulances.",
+        "estimatedTime": "4 min",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-RG-2026-0004-3",
+        "title": "Perimeter Access Corridor & Diversion",
+        "agent": "TRAFFIC",
+        "priority": "HIGH",
+        "description": "Implement emergency corridor ingress and divert non-essential traffic.",
+        "estimatedTime": "3 min",
+        "requiresApproval": true,
+        "approved": false
+      }
+    ],
+    "rationale": "Initial Plan v1 synthesized from concurrent multi-agent domain assessment.",
+    "primaryObjective": "Corridor containment, casualty triage, and rapid mitigation for River Valley Flash Flood & Vehicle Submersion.",
+    "uncertainties": [
+      "Exact non-ambulatory casualty count pending inner perimeter survey.",
+      "Live traffic tailback queue length upstream."
+    ],
+    "createdBy": "COMMANDER_AGENT",
+    "status": "PROPOSED",
+    "approvedBy": null,
+    "approvalNotes": null,
+    "createdAt": "2026-09-17T14:16:01.026878"
+  }
+]

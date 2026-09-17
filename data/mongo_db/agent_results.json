@@ -1,0 +1,189 @@
+[
+  {
+    "resultId": "RES-MED-192053AB",
+    "incidentId": "RG-2026-0001",
+    "agentName": "MEDICAL",
+    "findings": [
+      "Reported 6 individuals involved with potential high-impact trauma.",
+      "High probability of blunt force deceleration trauma given multi-vehicle highway collision.",
+      "Critical vulnerability window for occupants in smoking or damaged vehicles."
+    ],
+    "recommendations": [
+      "Deploy Advanced Life Support (ALS) triage station at designated safe perimeter staging zone.",
+      "Prepare 2 Rapid Transport Medical Helicopters on standby for critical red-tier casualties.",
+      "Establish on-scene START (Simple Triage and Rapid Treatment) sorting corridor immediately upon arrival."
+    ],
+    "uncertainty": [
+      "Exact number of non-ambulatory trapped victims remains unconfirmed by on-scene personnel.",
+      "Vital signs and Glasgow Coma Scale (GCS) unknown; estimates based solely on caller reports."
+    ],
+    "contextReferences": [
+      "CTX-19F5ACFF",
+      "CTX-B684361C",
+      "CTX-0C9868F4"
+    ],
+    "status": "COMPLETED",
+    "urgencyScore": 9,
+    "data": {
+      "triageFocus": "Trauma & Airway Protection",
+      "recommendedUnits": 3
+    },
+    "createdAt": "2026-09-17T14:29:37.573449"
+  },
+  {
+    "resultId": "RES-RSC-65EE8C12",
+    "incidentId": "RG-2026-0001",
+    "agentName": "RESCUE",
+    "findings": [
+      "Vehicle entanglement and structural cabin collapse likely requiring hydraulic cutting tools (Jaws of Life).",
+      "Thermal runaway and smoke emissions indicate immediate ignition risk to surrounding fuel lines.",
+      "Structural stability of highway barrier and surrounding vehicles compromised."
+    ],
+    "recommendations": [
+      "Deploy Heavy Rescue squad equipped with hydraulic spreaders and cutters.",
+      "Charge two 1.75-inch attack hose lines with Class B foam for rapid vapor suppression.",
+      "Enforce strict 100-foot hot zone isolation perimeter around smoking vehicle."
+    ],
+    "uncertainty": [
+      "Presence of electric vehicle high-voltage battery packs unverified.",
+      "Structural load-bearing condition of overturned vehicle unknown."
+    ],
+    "contextReferences": [
+      "CTX-804C9C25",
+      "CTX-BE6B2664",
+      "CTX-2691FE40"
+    ],
+    "status": "COMPLETED",
+    "urgencyScore": 10,
+    "data": {
+      "extricationRequired": true,
+      "hotZoneRadiusMeters": 35
+    },
+    "createdAt": "2026-09-17T14:29:38.759780"
+  },
+  {
+    "resultId": "RES-TRF-ECB73E84",
+    "incidentId": "RG-2026-0001",
+    "agentName": "TRAFFIC",
+    "findings": [
+      "Primary highway lanes reported obstructed by multi-vehicle collision debris.",
+      "Primary access ramp blocked by incident bottleneck; secondary service road remains viable.",
+      "Risk of secondary rear-end collisions in approaching traffic queue."
+    ],
+    "recommendations": [
+      "Establish emergency-only corridor via North Service Road (Exit 42B) for inbound ambulances.",
+      "Deploy Department of Transportation variable message signs 3 miles upstream warning drivers to divert.",
+      "Coordinate highway patrol rolling road block 1.5 miles prior to crash scene."
+    ],
+    "uncertainty": [
+      "Real-time congestion clearance rate depends on variable civilian driver compliance.",
+      "Exact lane clearance width for heavy ladder and rescue vehicles unverified."
+    ],
+    "contextReferences": [
+      "CTX-37BE2520",
+      "CTX-0F29E877",
+      "CTX-5271E386"
+    ],
+    "status": "COMPLETED",
+    "urgencyScore": 9,
+    "data": {
+      "primaryIngressCorridor": "Exit 42B North Access",
+      "isPrimaryLaneBlocked": true
+    },
+    "createdAt": "2026-09-17T14:29:39.988618"
+  },
+  {
+    "resultId": "RES-RSC-8AB122CD",
+    "incidentId": "RG-2026-0001",
+    "agentName": "RESOURCE",
+    "findings": [
+      "Incident complexity level requires multi-agency mutual aid deployment.",
+      "Estimated resource shortfall in heavy extrication gear if multiple vehicles are crushed.",
+      "Staging Area Alpha (Exit 42 North) provides sufficient apron for 12 tactical vehicles."
+    ],
+    "recommendations": [
+      "Request 3 Advanced Life Support (ALS) ambulances and 1 Basic Life Support (BLS) unit.",
+      "Stage 1 Heavy Rescue tender equipped with extrication hydraulic cutters.",
+      "Mobilize 1 Fire Suppression pumper with 750-gallon water tank and foam capabilities.",
+      "Request 2 Highway Patrol cruisers for highway corridor cordon."
+    ],
+    "uncertainty": [
+      "Real-time availability of off-duty volunteer personnel unknown.",
+      "Mutual aid response transit times subject to regional weather and traffic delay."
+    ],
+    "contextReferences": [
+      "CTX-804C9C25",
+      "CTX-5271E386",
+      "CTX-0F29E877"
+    ],
+    "status": "COMPLETED",
+    "urgencyScore": 8,
+    "data": {
+      "recommendedApparatus": [
+        "Ambulance ALS x3",
+        "Heavy Rescue x1",
+        "Fire Engine x1",
+        "Patrol x2"
+      ]
+    },
+    "createdAt": "2026-09-17T14:29:41.167555"
+  },
+  {
+    "resultId": "RES-COM-C9197655",
+    "incidentId": "RG-2026-0001",
+    "agentName": "COMMUNICATION",
+    "findings": [
+      "Incident classified as Multi-Agency Level 2 Highway Critical Incident.",
+      "Public inquiry volume anticipated due to major arterial highway closure.",
+      "Inter-agency radio interoperability required between EMS and Fire frequencies."
+    ],
+    "recommendations": [
+      "Transmit ICS-201 Incident Briefing to regional dispatch and hospital trauma centers.",
+      "Issue public emergency broadcast warning drivers to avoid Highway corridor for 4 hours.",
+      "Designate Media Staging Area 500m West of Exit 42 to prevent interference with emergency vehicles."
+    ],
+    "uncertainty": [
+      "Exact victim identities withheld pending family notification and triage confirmation."
+    ],
+    "contextReferences": [
+      "CTX-0C9868F4",
+      "CTX-499E24DF",
+      "CTX-0F29E877"
+    ],
+    "status": "COMPLETED",
+    "urgencyScore": 7,
+    "data": {
+      "sitrep": "SITREP 01: Critical highway collision at I-95 Northbound at Mile Marker 142. 6 casualties reported. Multi-agency response underway. Civilian detour in effect."
+    },
+    "createdAt": "2026-09-17T14:29:42.312877"
+  },
+  {
+    "resultId": "RES-MON-66612515",
+    "incidentId": "RG-2026-0001",
+    "agentName": "MONITOR",
+    "findings": [
+      "Incident trajectory shifting from initial stabilization to active multi-threat containment.",
+      "Weather conditions indicate 12 mph crosswinds, potentially affecting smoke dispersal.",
+      "Compounding hazard detected: thermal heat signature adjacent to gasoline fuel tank."
+    ],
+    "recommendations": [
+      "Trigger immediate tactical reassessment across all specialized agents.",
+      "Expand safety cordon from 50m to 150m immediately.",
+      "Alert regional burn unit and trauma center to prepare for potential surge."
+    ],
+    "uncertainty": [
+      "Rate of fire spread and potential hazardous materials in secondary vehicle trunk unverified."
+    ],
+    "contextReferences": [
+      "CTX-B684361C",
+      "CTX-5271E386",
+      "CTX-BE6B2664"
+    ],
+    "status": "COMPLETED",
+    "urgencyScore": 10,
+    "data": {
+      "escalationTriggered": true
+    },
+    "createdAt": "2026-09-17T14:29:43.447668"
+  }
+]

@@ -1,352 +1,253 @@
 # 🚨 RESCUEGRID AI
-### Collaborative Multi-Agent Emergency Response & Operational Coordination Platform
 
-[![Hackathon](https://img.shields.io/badge/Hackathon-Multiplayer%20AI%20%26%20Collaborative%20Agents-blue?style=for-the-badge&logo=google)](https://github.com/SiddharthK1257/RescueGrid-AI)
-[![Gemini](https://img.shields.io/badge/AI%20Engine-Google%20Gemini%203.6%20Flash-orange?style=for-the-badge&logo=googlegemini)](https://aistudio.google.com/)
-[![Database](https://img.shields.io/badge/Database-MongoDB%20Atlas-green?style=for-the-badge&logo=mongodb)](https://www.mongodb.com/atlas)
-[![Security](https://img.shields.io/badge/Auth-JWT%20HMAC--SHA256-red?style=for-the-badge&logo=jsonwebtokens)](https://jwt.io)
-[![Live Map](https://img.shields.io/badge/Live%20Map-100%25%20Free%20OSM%20%26%20Esri-emerald?style=for-the-badge&logo=openstreetmap)](https://www.openstreetmap.org)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+**Tagline:** *One Emergency. Many AI Agents. One Shared Context.*
 
-> **"AI-powered mission workspaces where humans and specialized autonomous agents share operational context and collaborate on dynamic, life-critical emergency lifecycles."**
+**Hackathon:** HiDevs Hackathon  
+**Challenge Track:** Multiplayer AI and Collaborative Agents  
+**Category:** AI-Powered Emergency-Response Coordination and Collaborative Intelligence Platform  
 
 ---
 
-## 🌟 Executive Summary
+## 🧭 Executive Summary
 
-**RescueGrid AI** transforms emergency incident management from an isolated, single-turn chatbot into an **authoritative multi-agent command centre**. During disaster and trauma events, seconds matter. Multiple specialized autonomous AI agents—**Commander, Medical, Rescue, Traffic & Route, Resource, Communication, and Situation Monitor**—collaborate continuously with human incident commanders over long-running incident lifecycles.
+**RESCUEGRID AI** is an emergency-response coordination workspace where human incident commanders and specialized AI agents collaborate on evolving disasters using shared context.
 
-Instead of treating emergency response as a single generic prompt:
-```
-OLD WAY: HUMAN OPERATOR ──> CHATBOT ──> GENERIC, ISOLATED ANSWER
-```
+Rather than a simple chatbot, RESCUEGRID AI provides a mission-critical operations grid:
+1. Receives complex emergency incident reports.
+2. Ingests and maintains continuous shared incident memory through **Moss**.
+3. Concurrently delegates domain tasks across **7 specialized AI agents** orchestrated in **Python**.
+4. Conducts structured reasoning using **Google Gemini**.
+5. Enables real-time voice communications and command discussion rooms via **LiveKit**.
+6. Visualizes disaster epicenters, hazard perimeters, and live browser GPS location on an **Interactive Tactical Leaflet Map**.
+7. Automatically triggers dynamic replanning when new telemetry is injected (Plan v1 ➔ Plan v2).
+8. Enforces a **Human-in-the-Loop** approval and verifiable audit trail.
 
-**RescueGrid AI** powers an active, stateful multi-agent swarm synchronized through **MOSS Shared Semantic Memory**, powered by **Google Gemini 3.6 Flash**, backed by **real MongoDB Atlas persistence**, secured with **JWT cryptographic authentication**, and visualized on an interactive **Free Live Map**:
-
----
-
-## 🏛️ System Architecture Diagrams
-
-### 1. High-Level System & Network Architecture
-
-```mermaid
-flowchart TD
-    subgraph ClientLayer["🖥️ Frontend Mission Command (React 19 + Vite + Tailwind CSS)"]
-        UI["Tactical Operations Dashboard"]
-        AuthUI["JWT Auth Modal & Personas"]
-        MapEngine["Free Live Tactical Map (OSM + Esri Satellite)"]
-        AudioSynth["Web Audio Sound Synthesizer"]
-        SocketClient["Socket.IO Real-time Stream Client"]
-    end
-
-    subgraph GatewayLayer["⚡ API Gateway & Communication Layer (Express 5 + Node.js)"]
-        APIGateway["REST API Router (/api)"]
-        JWTAuth["JWT Authentication Middleware (HMAC-SHA256)"]
-        SocketServer["Socket.IO WebSocket Hub"]
-    end
-
-    subgraph AgentOrchestration["🤖 Multi-Agent Collaborative Core"]
-        Commander["COMMANDER AGENT (Synthesis & Conflict Engine)"]
-        MedAgent["MEDICAL AGENT (Triage & Trauma)"]
-        RescAgent["RESCUE AGENT (Extrication & Hazards)"]
-        TrafAgent["TRAFFIC AGENT (Bypass & Route Telemetry)"]
-        ResAgent["RESOURCE AGENT (Apparatus Logistics)"]
-        CommsAgent["COMMUNICATION AGENT (EAS & Briefings)"]
-        SitAgent["SITUATION MONITOR (Status & Uncertainties)"]
-    end
-
-    subgraph MemoryIntelligence["🧠 Shared Context & Intelligence Layer"]
-        MOSS["MOSS Shared Memory Engine (Namespace + Cosine Similarity)"]
-        GeminiAI["Google Gemini 3.6 Flash Engine (@google/genai)"]
-    end
-
-    subgraph PersistenceLayer["💾 Data Persistence Layer"]
-        MongoAtlas[("MongoDB Atlas Cloud Database (Cluster0)")]
-        LocalStore[("Resilient High-Speed Document Store (Zero Downtime)")]
-    end
-
-    %% Client to Gateway
-    UI -->|REST Requests + Bearer JWT| APIGateway
-    MapEngine -->|Nominatim Free Geocode API| APIGateway
-    SocketClient <==>|Bi-directional Event Streaming| SocketServer
-
-    %% Gateway to Auth & Orchestration
-    APIGateway --> JWTAuth
-    JWTAuth --> AgentOrchestration
-
-    %% Orchestration to AI & MOSS
-    AgentOrchestration <==>|Context Query & State Sync| MOSS
-    AgentOrchestration <==>|Parallel LLM Reasoning| GeminiAI
-
-    %% Persistence
-    AgentOrchestration -->|Mongoose Schemas| MongoAtlas
-    AgentOrchestration -.->|Fallback / Cache| LocalStore
-    SocketServer -.->|Live Plan & Telemetry Broadcast| SocketClient
-```
+> [!IMPORTANT]
+> **Safety Boundary & Disclaimer:** RESCUEGRID AI is an AI-assisted coordination prototype for demonstration and training. AI-generated recommendations are advisory and require human review. It does NOT replace authorized 911 dispatch, trained first responders, or licensed medical doctors.
 
 ---
 
-### 2. Multi-Agent Collaborative Feedback Loop (Sequential Workflow)
+## 🛠️ Mandatory Technology Stack
 
-```mermaid
-sequenceDiagram
-    autonumber
-    actor Human as 👤 Incident Commander
-    participant MOSS as 🧠 MOSS Shared Context
-    participant Commander as 🎖️ Commander Agent
-    participant Specialists as 🤖 Parallel Specialized Agents (5 Sectors)
-    participant Gemini as ⚡ Google Gemini 3.6 Flash
-    participant DB as 💾 MongoDB Atlas
-    participant Web as 📡 Socket.IO Real-time Stream
-
-    Human->>MOSS: Inject New Information ("Vehicle on fire, primary lane blocked")
-    MOSS->>Web: Broadcast "live_activity" & context update
-    MOSS->>Commander: Trigger Automated Multi-Agent Reassessment
-    Commander->>Specialists: Delegate parallel sector tasks with role affinities
-    
-    par Parallel Sector Analysis
-        Specialists->>MOSS: Semantic context retrieval (weighted similarity)
-        Specialists->>Gemini: Execute sector prompt (Medical, Rescue, Traffic, Resources, Comms)
-        Gemini-->>Specialists: Validated structured analysis
-        Specialists->>MOSS: Write agent state & sector findings
-    end
-
-    Specialists-->>Commander: Consolidated findings & telemetry
-    Commander->>Gemini: Conflict detection & operational synthesis
-    Gemini-->>Commander: Resolved conflicts, "Why?" explainability, Plan v(n+1)
-    Commander->>DB: Persist revised plan, audit logs, and resources
-    Commander->>Web: Emit "plan_updated" with visual diff changelog
-    Web-->>Human: Interactive UI updates instantly (Toast alert + Audio ping)
-    Human->>Commander: Authorize plan or query individual agent ("Ask Agent")
-```
-
----
-
-### 3. Database Entity-Relationship Architecture
-
-```mermaid
-erDiagram
-    USERS ||--o{ HUMAN_ACTIONS : executes
-    USERS {
-        string userId PK
-        string name
-        string email UK
-        string passwordHash
-        string role
-        string department
-        string badgeNumber
-    }
-
-    INCIDENTS ||--o{ INCIDENT_UPDATES : receives
-    INCIDENTS ||--o{ RESPONSE_PLANS : generates
-    INCIDENTS ||--o{ EMERGENCY_RESOURCES : requires
-    INCIDENTS ||--o{ AUDIT_LOGS : records
-    INCIDENTS ||--o{ MOSS_CONTEXT : indexes
-    INCIDENTS {
-        string incidentId PK
-        string title
-        string type
-        string severity
-        int affectedPeople
-        string status
-        datetime createdAt
-    }
-
-    RESPONSE_PLANS ||--o{ CONFLICT_ITEMS : contains
-    RESPONSE_PLANS ||--o{ EXPLAINABILITY_ITEMS : explains
-    RESPONSE_PLANS {
-        string planId PK
-        string incidentId FK
-        int version
-        string summary
-        string approvalStatus
-        string approvedBy
-    }
-
-    MOSS_CONTEXT {
-        string itemId PK
-        string incidentId FK
-        string source
-        string type
-        string content
-        string summary
-        float importance
-    }
-
-    EMERGENCY_RESOURCES {
-        string resourceId PK
-        string incidentId FK
-        string name
-        string type
-        int quantity
-        string priority
-        string status
-        int etaMinutes
-    }
-```
-
----
-
-## 🤖 The 7 Specialized Autonomous Agents
-
-| Agent | Tactical Sector | Core Responsibilities & Safety Guardrails |
+| Mandatory Technology | Architecture Role | Verification & Integration Details |
 | :--- | :--- | :--- |
-| **COMMANDER** | Strategic Command | Decomposes incidents, delegates tasks, detects inter-agent conflicts, resolves precedence, synthesizes unified Response Plans, and publishes change explanations (*Why?*). |
-| **MEDICAL** | Triage & Healthcare | Categorizes casualties strictly by urgency (**CRITICAL, URGENT, NON-URGENT, UNKNOWN**). Guardrail: **Never diagnoses clinical conditions**; provides operational casualty coordination with mandatory disclaimers. |
-| **RESCUE** | Physical Extrication | Evaluates physical hazards (entrapment, thermal runaway, smoke toxicity, structural collapse). Outputs rescue priorities, equipment specs, and safety corridors. |
-| **TRAFFIC** | Route & Access | Monitors highway obstruction, lane constriction, and active road closures. Computes alternate emergency bypass corridors (e.g. Corridor Route 4B North Bypass). |
-| **RESOURCE** | Logistics Demand | Calculates needed apparatus (ALS Ambulances, Fire Engines, Heavy Extrication, Police Units). Guardrail: Never claims an apparatus is physically on-scene without external dispatch confirmation. |
-| **COMMUNICATION** | Alerts & Briefings | Synthesizes tactical responder briefings, Emergency Alert System (EAS) public broadcast warnings, and command center situational updates. |
-| **SITUATION** | Situational Awareness | Evaluates live incident state (**REPORTED, ASSESSING, ACTIVE RESPONSE, ESCALATED, CONTAINED, RESOLVED**) and surfaces residual operational uncertainties. |
+| **Moss** | Shared Context & Multi-Agent Memory | Ingests dispatch reports, agent findings, operator notes, and versioned plans. Provides semantic retrieval across agent memories with automatic local demo context fallback. |
+| **LiveKit** | Real-Time Voice Collaboration | Server-side temporary JWT room token generation (`livekit-api` SDK), animated audio waveforms, microphone toggles, participant roster, and text chat fallback. |
+| **Next.js 16** | Command-Centre Frontend | Built with Next.js 16 App Router, React 19, TypeScript, and Tailwind CSS. Dark tactical command-centre theme with 14 modular views. |
+| **Python 3.11+** | AI Processing & Orchestration | High-performance asynchronous agent engine (`asyncio.gather`), typed Pydantic models, and conflict resolution algorithms. |
+| **FastAPI** | Backend REST & Telemetry API | Robust REST API endpoints for incident lifecycles, dynamic reassessment, map data, LiveKit tokens, and audit logging. |
+| **Gemini API** | Structured Reasoning Engine | Generates structured JSON assessments, START triage classifications, hazard cordons, and versioned response plans. |
+| **MongoDB** | Persistent Application Datastore | Asynchronous Motor driver persistence with seamless in-memory fallback store ensuring zero demo crashes. |
+| **Interactive Map** | Location Visualization & Live GPS | Leaflet interactive map with browser Geolocation API (`"Use My Live Location"` with explicit permission gates), tactical markers, and simulated GPS mode. |
 
 ---
 
-## ⚔️ Real-Time Conflict Detection & Resolution
+## 🏗️ System Architecture
 
-During real emergencies, specialist agents frequently have competing priorities. **RescueGrid AI** solves this with automated conflict resolution:
-
+```text
+                             HUMAN OPERATOR
+                                   │
+                                   ▼
+                       NEXT.JS 16 COMMAND CENTRE
+                                   │
+             ┌─────────────────────┼─────────────────────┐
+             │                     │                     │
+             ▼                     ▼                     ▼
+      INCIDENT WORKSPACE        LIVEKIT             TACTICAL MAP
+      • Plan Approval/Reject   • WebRTC Voice Room  • Leaflet OSM
+      • Injected Updates       • Audio Visualizer   • Browser Live GPS
+      • Audit Timeline         • Text Fallback      • Tactical Markers
+             │                     │                     │
+             └─────────────────────┼─────────────────────┘
+                                   ▼
+                       FASTAPI PYTHON BACKEND
+                                   │
+                                   ▼
+                      PYTHON AGENT ORCHESTRATOR
+                                   │
+                                   ▼
+                         COMMANDER AGENT
+                                   │
+        ┌──────────────────────────┼──────────────────────────┐
+        │                          │                          │
+        ▼                          ▼                          ▼
+  SPECIALIZED AGENTS         MOSS SHARED CONTEXT      PERSISTENT STATE
+  • Medical Triage           • Semantic Retrieval     • MongoDB (Motor)
+  • Heavy Rescue             • Cross-Agent Memory     • Resilient In-Memory
+  • Traffic & Routes         • Plan Snapshots         • Audit Trail
+  • Asset Resources          • Local Demo Fallback
+  • Public Safety PIO
+  • Situation Monitor
+        │                          │                          │
+        └──────────────────────────┼──────────────────────────┘
+                                   ▼
+                           GEMINI AI REASONING
+                                   │
+                                   ▼
+                         VERSIONED RESPONSE PLAN
+                                   │
+                                   ▼
+                         HUMAN-IN-THE-LOOP APPROVAL
 ```
-┌────────────────────────────────────────────────────────────────────────────────────────┐
-│ 🚨 CONFLICT DETECTED BY COMMANDER AGENT                                               │
-├────────────────────────────────────────────────────────────────────────────────────────┤
-│ • MEDICAL AGENT: Demands immediate, rapid highway access for critical trauma victims.  │
-│ • TRAFFIC AGENT: Reports primary expressway is completely obstructed by collided cars. │
-├────────────────────────────────────────────────────────────────────────────────────────┤
-│ 💡 COMMANDER OPERATIONAL ANALYSIS:                                                     │
-│ Routing ambulances into the primary blockage creates an 18-minute transit bottleneck.   │
-│ Route clearance priority must supersede nominal distance preference.                   │
-├────────────────────────────────────────────────────────────────────────────────────────┤
-│ ✅ RESOLUTION & DIRECTIVE:                                                             │
-│ Divert all incoming ALS Ambulances to Corridor Route 4B (North Bypass) under police    │
-│ escort. Establish an on-scene Casualty Collection Point at Exit 14 Overpass.           │
-└────────────────────────────────────────────────────────────────────────────────────────┘
+
+---
+
+## 🤖 Specialized AI Agent Hierarchy
+
+1. **Commander Agent**
+   - Central coordinator.
+   - Evaluates multi-agent assessments, resolves tactical trade-offs, and synthesizes versioned Response Plans (v1, v2...).
+   - Explicitly explains why plans changed following injected field updates.
+2. **Medical Agent**
+   - START triage categorization (Immediate/Delayed/Minor) and casualty flow estimates without diagnosing patients.
+3. **Rescue Agent**
+   - Assesses vehicle cabin deformation, extrication cutter requirements, and establishes hot/warm/cold safety cordons.
+4. **Traffic & Route Agent**
+   - Analyzes highway bottlenecks, establishes emergency ingress corridors (e.g. Exit 42B bypass), and alerts upstream message signs.
+5. **Resource Agent**
+   - Quantifies required mutual aid apparatus (ALS ambulances, heavy rescue tenders, foam pumpers) and organizes Staging Area Alpha.
+6. **Communication Agent**
+   - Generates NIMS/ICS compliant Situation Reports (SITREP) and drafts public safety evacuation advisories.
+7. **Situation Monitor Agent**
+   - Continuously tracks environmental drift, smoke dispersion, and compound hazard triggers.
+
+---
+
+## 🎬 Flagship Hackathon Demo Walkthrough
+
+### Scenario: Interstate 95 Multi-Vehicle Pileup (`RG-2026-0001`)
+
+**Initial 911 Report:**
+> *"Three vehicles have collided on a highway. Six people are reportedly involved. Two people may have serious injuries. One vehicle is smoking, and the highway is partially blocked."*
+
+### Demo Execution Steps:
+
+```text
+Step 1: Open RESCUEGRID AI Command Centre
+        ↓
+Step 2: Initialize Flagship Scenario (RG-2026-0001)
+        ↓
+Step 3: Moss Context Initialized with Initial 911 Report
+        ↓
+Step 4: Specialized Agents Concurrently Assess & Commander Synthesizes Plan v1
+        (Immediate hydraulic extrication, ALS triage station, Exit 41 traffic divert)
+        ↓
+Step 5: Operator Selects "Use My Live Location" (Demonstrates Browser GPS Permission)
+        ↓
+Step 6: Operator Opens LiveKit Voice Room & Discusses Tactical Picture
+        ↓
+Step 7: Operator Injects Critical Escalation:
+        "Fire is now reported in one vehicle, and the primary access lane is blocked."
+        ↓
+Step 8: Moss Shared Context Updated in Real-Time
+        ↓
+Step 9: Traffic, Rescue, Medical, and Monitor Agents Reassess in Parallel
+        ↓
+Step 10: Commander Formulates Revised Plan v2:
+         • Action 1 (TRAFFIC): Reroute ambulances via North Service Road (Exit 42B)
+         • Action 2 (RESCUE): Charge Class B foam suppression attack line
+         • Action 3 (MEDICAL): Relocate triage station to 150m upwind buffer zone
+        ↓
+Step 11: Human Operator Reviews and Clicks "Approve Plan"
+        ↓
+Step 12: Action Recorded in Immutable Audit Timeline Log
 ```
-
----
-
-## 🗺️ 100% Free Live Map Engine (Zero API Key)
-
-The built-in Tactical Map ([`client/src/components/EmergencyMap.tsx`](client/src/components/EmergencyMap.tsx)) requires **zero paid map subscriptions**:
-
-1. **4 Free Switchable Tile Layers**:
-   - 🌑 **CartoDB Dark Matter**: High-contrast tactical mode for dark command rooms.
-   - 🛰️ **Esri World Imagery**: Real high-resolution satellite aerial imagery.
-   - 🗺️ **OpenStreetMap Standard**: Classical street and arterial navigation.
-   - ⛰️ **OpenTopoMap**: Topographical elevation contours for search and rescue.
-2. **OpenStreetMap Nominatim Free Geocoder**:
-   - Interactive search bar to search any address, mile marker, or city globally with animated fly-to camera.
-3. **Live Responder Fleet Telemetry**:
-   - Real-time animated markers for ALS Ambulances, Fire Engines, Police Cruisers, and Heavy Rescue apparatus with live speed, ETA, and assignment popups.
-4. **Visual Hazard Boundaries**:
-   - Flashing roadblock barrier at Mile 44, glowing Route 4B detour corridor, pulsating incident epicenter, and 350m hazard perimeter.
-5. **Browser HTML5 Geolocation**:
-   - Instant "Locate Command Post" button with animated radar pulse.
-
----
-
-## 🔒 Cryptographic JWT Authentication & Demo Personas
-
-Built-in HMAC-SHA256 JWT authentication protects operational actions and assigns verified identities:
-
-### 1-Click Operational Command Personas:
-- 🛡️ **Chief Sarah Jenkins** — *Incident Commander* (`commander@rescuegrid.ai` / `Commander2026!`)
-- 📡 **Marcus Vance** — *Senior Operations Dispatcher* (`dispatcher@rescuegrid.ai` / `Dispatch2026!`)
-- 🚒 **Capt. Elena Rostova** — *Field Rescue Lead* (`fieldlead@rescuegrid.ai` / `Rescue2026!`)
-- 🩺 **Dr. Aris Thorne** — *Medical Triage Director* (`medical@rescuegrid.ai` / `Medical2026!`)
-
-Users can also register custom accounts with dedicated tactical roles (`COMMANDER_OPERATOR`, `DISPATCHER`, `FIELD_LEAD`, `OBSERVER`).
-
----
-
-## 💻 Tech Stack & Tooling
-
-| Domain | Technologies Used |
-| :--- | :--- |
-| **Frontend UI** | React 19, TypeScript, Tailwind CSS v4, Lucide Icons, Vite |
-| **Mapping Engine** | Leaflet, OpenStreetMap, CartoDB, Esri World Imagery, OpenTopoMap, Nominatim API |
-| **Backend Core** | Node.js, Express 5, TypeScript, tsx watch |
-| **Real-time Comms** | Socket.IO (WebSocket push & incident room channels) |
-| **AI Reasoning** | Google Gemini 3.6 Flash (`@google/genai` SDK) |
-| **Shared Memory** | MOSS (Multi-Agent Operational Shared State Engine with TF-IDF Vector Cosine Retrieval) |
-| **Database** | MongoDB Atlas (Mongoose 9 ODM) + Resilient In-Memory Fallback Cache |
-| **Security** | JSON Web Tokens (`jsonwebtoken`), Password Hashing (`bcryptjs`) |
-| **Audio Engine** | Web Audio API Synthesizer (Zero external audio files) |
 
 ---
 
 ## 🚀 Quick Start Guide
 
 ### Prerequisites
-- **Node.js**: v18+ (tested on Node.js v24)
-- **npm**: v9+
+- **Node.js**: v18.0.0 or higher
+- **Python**: v3.11 or higher (or `uv`)
 
-### 1. Clone the Repository
+### 1. Installation
+
+Clone and install backend & frontend dependencies:
+
 ```bash
+# Clone the repository
 git clone https://github.com/SiddharthK1257/RescueGrid-AI.git
 cd RescueGrid-AI
-```
 
-### 2. Install Dependencies
-```bash
-# Install root dependencies
+# Install frontend dependencies
+cd next_app
 npm install
+cd ..
 
-# Install client dependencies
-npm --prefix client install
+# Create Python virtual environment and install packages
+python -m venv backend_venv
+backend_venv\Scripts\pip install -r backend/requirements.txt
 ```
 
-### 3. Configure Environment
-Create a `.env` file in the root directory (or copy `.env.example`):
+*(If using `uv`, you can run `uv pip install -p backend_venv\Scripts\python.exe -r backend/requirements.txt`)*
+
+### 2. Environment Configuration
+
+Verify or edit your `.env` file in the project root:
+
 ```env
-PORT=5000
-
-# MongoDB Atlas Connection String
-MONGODB_URI=mongodb+srv://<db_username>:<db_password>@cluster0.jmxqta5.mongodb.net/?appName=Cluster0
-DB_USERNAME=admin
-
-# Google Gemini API Key (Server-side only)
+PORT=8000
+HOST=0.0.0.0
+MONGODB_URI=mongodb+srv://admin:your_password@cluster0.mongodb.net/?appName=Cluster0
 GEMINI_API_KEY=your_gemini_api_key_here
-
-# JWT Secret
-JWT_SECRET=rescuegrid-jwt-secret-key-3f98a2e1d054bc-2026
-
-# MOSS Shared Memory
-MOSS_ENDPOINT=http://localhost:5000/api/moss/local
+LIVEKIT_API_KEY=devkey
+LIVEKIT_API_SECRET=secretkey1234567890abcdefghijklmnopqrstuvwxyz
+LIVEKIT_URL=wss://rescuegrid.livekit.cloud
+MOSS_API_KEY=
+MOSS_ENDPOINT=http://localhost:8000/api/moss/local
 ```
-*(Note: You can also configure your Gemini API Key and MongoDB Atlas credentials dynamically in the web UI via the Settings modal!)*
 
-### 4. Run Development Servers
+### 3. Launching the Application
+
+Run both the **FastAPI Backend** (port 8000) and **Next.js Frontend** (port 3000) concurrently with a single command:
+
 ```bash
 npm run dev
 ```
-- **Web App (Vite Dev Server)**: [http://localhost:5173](http://localhost:5173)
-- **Backend API & Socket.IO**: [http://localhost:5000](http://localhost:5000)
 
-### 5. Production Build & Execution
+Or on Windows, double-click:
 ```bash
-npm run build
-npm start
+start.bat
 ```
-Open **[http://localhost:5000](http://localhost:5000)** to view the production build.
+
+Open your browser at:
+**http://localhost:3000**
 
 ---
 
-## 🏆 Hackathon Step-by-Step Demonstration Walkthrough
+## 🧪 Testing Suite
 
-1. **Launch Platform**: Open the dashboard at [http://localhost:5000](http://localhost:5000). The Flagship Scenario (`RG-2026-0001` Highway Multi-Vehicle Collision) auto-initializes.
-2. **Observe Multi-Agent Pipeline**: View the 7 specialized agents analyzing trauma, routes, hazards, and logistics in parallel.
-3. **Inspect MOSS Context**: Switch to the **SHARED CONTEXT** tab to inspect role-affinity weighted memory items.
-4. **Interactive Tactical Map**: Switch to **INCIDENT MAP**. Toggle between Dark Tactical, Satellite Aerial, and Topographical layers. Try the free OpenStreetMap address search bar.
-5. **Simulate Disaster Evolution (Step 9)**: Click `+ INJECT UPDATE` and submit:
-   > *"Fire is now reported in one vehicle and the primary access lane is blocked."*
-6. **Watch Real-Time Reassessment**:
-   - Rescue Agent immediately escalates fire hazard to **CRITICAL**.
-   - Traffic Agent marks the primary highway **HARD CLOSED** and activates Corridor 4B Bypass.
-   - Commander Agent resolves the thermal vs extrication conflict and publishes **Response Plan v2**.
-7. **Inspect Explainability ("Why?")**: Click any recommendation to view the exact MOSS context items, uncertainty score, and decision rationale.
-8. **Approve Directives**: Click `APPROVE PLAN` as Incident Commander to authorize actions.
+Run the full automated integration test suite:
+
+```bash
+# Run backend pytest suite
+npm run backend:test
+```
+
+Or directly via pytest:
+```bash
+backend_venv\Scripts\python.exe -m pytest backend/tests/test_api.py -v
+```
+
+### Test Coverage Highlights:
+- ✅ Health endpoint & service availability reporting
+- ✅ Incident creation & coordinate validation
+- ✅ Moss shared context ingestion and retrieval
+- ✅ Multi-agent concurrent pipeline execution
+- ✅ LiveKit server token generation
+- ✅ Human approval & plan status state transitions
+- ✅ Simulation update injection & Plan v2 dynamic replanning
+
+---
+
+## 🛡️ Security & Privacy Compliance
+
+- **No Secrets in Client Code**: All Gemini API keys, LiveKit API secrets, and database credentials remain strictly server-side.
+- **Browser Geolocation Privacy**: Exact coordinates are never collected without explicit browser permission. Users can stop tracking at any time, or switch to simulated GPS mode.
+- **Explainable AI**: Every plan modification contains reasoning and highlights unresolved uncertainty.
 
 ---
 
 ## 📄 License
-This project is open-source under the **MIT License**. Built for the **Multiplayer AI & Collaborative Agents Hackathon**.
+MIT License. Built for the **HiDevs Hackathon — Multiplayer AI and Collaborative Agents**.

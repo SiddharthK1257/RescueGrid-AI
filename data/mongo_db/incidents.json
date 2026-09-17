@@ -1,0 +1,84 @@
+[
+  {
+    "incidentId": "RG-2026-0001",
+    "type": "TRAFFIC_COLLISION",
+    "title": "Interstate 95 Multi-Vehicle Pileup",
+    "location": "I-95 Northbound at Mile Marker 142",
+    "latitude": 37.7749,
+    "longitude": -122.4194,
+    "locationSource": "SIMULATED",
+    "description": "Three vehicles have collided on a highway. Six people are reportedly involved. Two people may have serious injuries. One vehicle is smoking, and the highway is partially blocked.",
+    "severity": "CRITICAL",
+    "affectedPeople": 6,
+    "hazards": [
+      "TOTAL_LANE_BLOCKAGE",
+      "SMOKING_VEHICLE",
+      "TRAPPED_OCCUPANTS",
+      "ACTIVE_FIRE",
+      "PARTIAL_ROAD_BLOCKAGE"
+    ],
+    "status": "ACTIVE",
+    "createdAt": "2026-09-17T14:29:27.915775",
+    "updatedAt": "2026-09-17T14:29:36.397756"
+  },
+  {
+    "incidentId": "RG-2026-0002",
+    "type": "HAZMAT",
+    "title": "Metro Industrial Chemical Vapor Leak",
+    "location": "Bayview Industrial Park, Tank Battery 4",
+    "latitude": 37.7612,
+    "longitude": -122.4012,
+    "locationSource": "FIELD_RESPONDER",
+    "description": "Anhydrous ammonia pressurized line rupture. Dense toxic vapor plume drifting north-northeast towards commercial district. 12 facility workers self-evacuating.",
+    "severity": "CRITICAL",
+    "affectedPeople": 12,
+    "hazards": [
+      "TOXIC_AMMONIA_PLUME",
+      "PRESSURIZED_VESSEL_RISK",
+      "CIVILIAN_EXPOSURE"
+    ],
+    "status": "ACTIVE",
+    "createdAt": "2026-09-17T14:16:01.010751",
+    "updatedAt": "2026-09-17T14:16:01.010751"
+  },
+  {
+    "incidentId": "RG-2026-0003",
+    "type": "FIRE",
+    "title": "4th-Alarm Downtown Commercial High-Rise Fire",
+    "location": "580 Market Street (Floor 14-16)",
+    "latitude": 37.7891,
+    "longitude": -122.4014,
+    "locationSource": "USER_REPORTED",
+    "description": "Active structure fire on 14th floor of mixed commercial high-rise. Heavy smoke showing on north face. Fire alarm activated; approximately 25 occupants sheltering in place on upper floors.",
+    "severity": "HIGH",
+    "affectedPeople": 25,
+    "hazards": [
+      "FLASHOVER_POTENTIAL",
+      "UPWARD_SMOKE_PROPAGATION",
+      "TRAPPED_OCCUPANTS_FLOOR_16"
+    ],
+    "status": "ACTIVE",
+    "createdAt": "2026-09-17T14:16:01.016009",
+    "updatedAt": "2026-09-17T14:16:01.016009"
+  },
+  {
+    "incidentId": "RG-2026-0004",
+    "type": "FLOOD",
+    "title": "River Valley Flash Flood & Vehicle Submersion",
+    "location": "River Valley Crossing at Lower Mill Road",
+    "latitude": 37.7925,
+    "longitude": -122.4285,
+    "locationSource": "GPS_LIVE",
+    "description": "Rapidly rising creek waters swept passenger SUV into retention basin. Vehicle partially submerged in fast-flowing water with 3 occupants on vehicle roof.",
+    "severity": "CRITICAL",
+    "affectedPeople": 3,
+    "hazards": [
+      "SWIFT_WATER_CURRENT",
+      "HYPOTHERMIA_RISK",
+      "UNSTABLE_VEHICLE_POSITION"
+    ],
+    "status": "ACTIVE",
+    "createdAt": "2026-09-17T14:16:01.022345",
+    "updatedAt": "2026-09-17T14:16:01.022345"
+  }
+]

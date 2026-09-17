@@ -28,10 +28,10 @@ type MapLayerType = 'DARK_TACTICAL' | 'SATELLITE' | 'STREET_MAP' | 'TOPO_TERRAIN
 
 const TILE_LAYERS: Record<MapLayerType, { name: string; url: string; attribution: string; maxZoom: number }> = {
   DARK_TACTICAL: {
-    name: 'CartoDB Dark Matter (Free OSM)',
-    url: 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
-    attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
-    maxZoom: 19
+    name: 'Esri Dark Canvas (Free / Zero Key)',
+    url: 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}',
+    attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
+    maxZoom: 18
   },
   SATELLITE: {
     name: 'Esri World Imagery (Free Satellite)',
