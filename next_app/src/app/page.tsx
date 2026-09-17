@@ -152,6 +152,7 @@ function DashboardApp() {
 
   // Initial Load
   useEffect(() => {
+    let isMounted = true;
     const initSystem = async () => {
       try {
         const [healthData, incList] = await Promise.all([
@@ -159,6 +160,7 @@ function DashboardApp() {
           api.getIncidents().catch(() => []),
         ]);
 
+        if (!isMounted) return;
         if (healthData) setSystemHealth(healthData);
 
         if (incList && incList.length > 0) {
@@ -176,10 +178,17 @@ function DashboardApp() {
 
     initSystem();
 
+    return () => {
+      isMounted = false;
+    };
+  }, [loadIncidentData]);
+
+  // Periodic Telemetry Sync
+  useEffect(() => {
+    if (!activeIncident?.incidentId) return;
+
     const interval = setInterval(() => {
-      if (activeIncident) {
-        loadIncidentData(activeIncident.incidentId);
-      }
+      loadIncidentData(activeIncident.incidentId);
     }, 4000);
 
     return () => clearInterval(interval);

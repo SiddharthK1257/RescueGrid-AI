@@ -160,7 +160,7 @@ export const IncidentWorkspace: React.FC<IncidentWorkspaceProps> = ({
                 {activeIncident.description}
               </div>
               <div className="flex flex-wrap gap-1 pt-1">
-                {activeIncident.hazards.map((h, i) => (
+                {(activeIncident.hazards || []).map((h, i) => (
                   <span key={i} className="px-1.5 py-0.5 rounded bg-red-950 text-red-300 border border-red-800/60 text-[9px] font-mono">
                     {h}
                   </span>
@@ -210,7 +210,7 @@ export const IncidentWorkspace: React.FC<IncidentWorkspaceProps> = ({
               }`}
             >
               <Activity className="w-3.5 h-3.5" />
-              <span>Agents ({agentResults.length})</span>
+              <span>Agents ({agentResults?.length || 0})</span>
             </button>
 
             <button

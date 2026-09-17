@@ -53,7 +53,7 @@ class GeminiService:
         try:
             full_prompt = f"{system_instruction}\n\nYou must return ONLY a valid JSON object matching the requested schema.\n\nTask:\n{prompt}"
             
-            candidate_models = ["gemini-3.6-flash", "gemini-2.0-flash", "gemini-1.5-flash"]
+            candidate_models = ["gemini-3.6-flash", "gemini-3.5-flash", "gemini-flash-latest"]
             text = None
 
             for model_name in candidate_models:
@@ -72,7 +72,12 @@ class GeminiService:
                     if text:
                         break
                 except Exception as model_err:
-                    logger.warning(f"Model {model_name} attempt: {model_err}")
+                    err_str = str(model_err)
+                    logger.warning(f"Model {model_name} attempt: {err_str}")
+                    if "429" in err_str or "RESOURCE_EXHAUSTED" in err_str:
+                        # Free-tier rate limit or quota exceeded: immediately use intelligent domain fallback
+                        logger.info("Gemini rate limit reached; employing instant deterministic domain fallback.")
+                        return fallback_data
                     continue
 
             if not text:

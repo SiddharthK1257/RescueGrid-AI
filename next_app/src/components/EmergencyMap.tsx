@@ -165,7 +165,10 @@ export const EmergencyMap: React.FC<EmergencyMapProps> = ({
     const initMap = async () => {
       if (typeof window === 'undefined' || !mapContainerRef.current) return;
 
-      const L = (await import('leaflet')).default;
+      const leafletModule = await import('leaflet');
+      const L = (leafletModule as any).default || leafletModule;
+
+      if (!L || !L.Icon) return;
 
       // Fix default Leaflet icon paths
       delete (L.Icon.Default.prototype as any)._getIconUrl;
@@ -175,28 +178,36 @@ export const EmergencyMap: React.FC<EmergencyMapProps> = ({
         shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
       });
 
-      if (!mapInstanceRef.current && isMounted) {
+      if (!mapInstanceRef.current && isMounted && mapContainerRef.current) {
+        if ((mapContainerRef.current as any)._leaflet_id) {
+          delete (mapContainerRef.current as any)._leaflet_id;
+        }
+
         const initialLat = incident ? incident.latitude : 37.7749;
         const initialLng = incident ? incident.longitude : -122.4194;
 
-        const map = L.map(mapContainerRef.current, {
-          center: [initialLat, initialLng],
-          zoom: 14,
-          zoomControl: true,
-          fadeAnimation: true,
-        });
+        try {
+          const map = L.map(mapContainerRef.current, {
+            center: [initialLat, initialLng],
+            zoom: 14,
+            zoomControl: true,
+            fadeAnimation: true,
+          });
 
-        applyTileLayer(activeLayer, map, L);
+          applyTileLayer(activeLayer, map, L);
 
-        mapInstanceRef.current = map;
-        setMapLoaded(true);
+          mapInstanceRef.current = map;
+          setMapLoaded(true);
 
-        // Immediate size adjustment to avoid grey tile glitches
-        setTimeout(() => {
-          if (mapInstanceRef.current) {
-            mapInstanceRef.current.invalidateSize();
-          }
-        }, 250);
+          // Immediate size adjustment to avoid grey tile glitches
+          setTimeout(() => {
+            if (mapInstanceRef.current) {
+              mapInstanceRef.current.invalidateSize();
+            }
+          }, 250);
+        } catch (mapErr) {
+          console.warn('[EmergencyMap] Leaflet initialization notice:', mapErr);
+        }
       }
     };
 
@@ -224,6 +235,9 @@ export const EmergencyMap: React.FC<EmergencyMapProps> = ({
         mapInstanceRef.current.remove();
         mapInstanceRef.current = null;
       }
+      if (currentContainer && (currentContainer as any)._leaflet_id) {
+        delete (currentContainer as any)._leaflet_id;
+      }
     };
   }, []);
 
@@ -231,7 +245,9 @@ export const EmergencyMap: React.FC<EmergencyMapProps> = ({
   const handleSwitchLayer = async (layerKey: MapLayerType) => {
     setActiveLayer(layerKey);
     if (!mapInstanceRef.current || typeof window === 'undefined') return;
-    const L = (await import('leaflet')).default;
+    const leafletModule = await import('leaflet');
+    const L = (leafletModule as any).default || leafletModule;
+    if (!L) return;
     applyTileLayer(layerKey, mapInstanceRef.current, L);
   };
 
@@ -240,8 +256,9 @@ export const EmergencyMap: React.FC<EmergencyMapProps> = ({
     if (!mapInstanceRef.current || typeof window === 'undefined' || !mapLoaded) return;
 
     import('leaflet').then((LModule) => {
-      const L = LModule.default;
+      const L = (LModule as any).default || LModule;
       const map = mapInstanceRef.current;
+      if (!map || !L) return;
 
       // Clear existing incident markers
       leafletMarkersRef.current.forEach((m) => map.removeLayer(m));
@@ -355,7 +372,7 @@ export const EmergencyMap: React.FC<EmergencyMapProps> = ({
               ${marker.description || 'Active incident telemetry point.'}
             </div>
             <div style="border-top: 1px solid #1e293b; padding-top: 4px; font-size: 10px; color: #64748b; font-family: monospace;">
-              Coordinates: ${marker.latitude.toFixed(4)}, ${marker.longitude.toFixed(4)}
+              Coordinates: ${marker.latitude != null ? marker.latitude.toFixed(4) : ''}, ${marker.longitude != null ? marker.longitude.toFixed(4) : ''}
             </div>
           </div>
         `;
@@ -371,8 +388,9 @@ export const EmergencyMap: React.FC<EmergencyMapProps> = ({
     if (!mapInstanceRef.current || typeof window === 'undefined' || !mapLoaded) return;
 
     import('leaflet').then((LModule) => {
-      const L = LModule.default;
+      const L = (LModule as any).default || LModule;
       const map = mapInstanceRef.current;
+      if (!map || !L) return;
 
       // Clean up previous user marker and accuracy circle
       if (userMarkerRef.current) {
@@ -556,7 +574,7 @@ export const EmergencyMap: React.FC<EmergencyMapProps> = ({
               </span>
             </div>
             <div className="text-[11px] text-slate-400 font-mono">
-              Center: {incident ? `${incident.latitude.toFixed(4)}, ${incident.longitude.toFixed(4)}` : 'No incident loaded'}
+              Center: {incident && incident.latitude != null && incident.longitude != null ? `${incident.latitude.toFixed(4)}, ${incident.longitude.toFixed(4)}` : 'No incident loaded'}
             </div>
           </div>
         </div>

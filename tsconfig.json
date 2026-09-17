@@ -10,5 +10,6 @@
     "resolveJsonModule": true,
     "outDir": "./dist"
   },
-  "include": ["server/**/*"]
+  "include": ["server/**/*"],
+  "exclude": ["node_modules", "dist", "next_app", "client", "backend"]
 }
