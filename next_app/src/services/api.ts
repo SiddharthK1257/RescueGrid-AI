@@ -4,7 +4,29 @@ import {
   AuthUser
 } from '../types';
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+const isDev = process.env.NODE_ENV === 'development';
+export const PRODUCTION_BACKEND_URL = 'https://rescuegrid-ai-lmyh.onrender.com';
+
+/**
+ * Returns the active FastAPI backend URL.
+ * Automatically adapts:
+ * - If NEXT_PUBLIC_API_URL is set, uses that.
+ * - In local browser (localhost or 127.0.0.1), uses http://localhost:8000.
+ * - On production web domains (e.g. Vercel), uses PRODUCTION_BACKEND_URL (Render).
+ */
+export function getActiveBackendUrl(): string {
+  if (process.env.NEXT_PUBLIC_API_URL) {
+    return process.env.NEXT_PUBLIC_API_URL.replace(/\/$/, '');
+  }
+  if (typeof window !== 'undefined') {
+    const host = window.location.hostname;
+    if (host === 'localhost' || host === '127.0.0.1') {
+      return 'http://localhost:8000';
+    }
+    return PRODUCTION_BACKEND_URL;
+  }
+  return isDev ? 'http://localhost:8000' : PRODUCTION_BACKEND_URL;
+}
 
 export function getStoredToken(): string | null {
   if (typeof window === 'undefined') return null;
@@ -21,8 +43,15 @@ export function removeStoredToken() {
   localStorage.removeItem('rescuegrid_jwt_token');
 }
 
+/**
+ * Resilient JSON fetcher:
+ * 1. Calls primary endpoint (direct to backend or configured URL).
+ * 2. If primary fails with network error or 5xx/504 gateway timeout (e.g. while Render is waking up),
+ *    automatically attempts fallback via the relative Next.js proxy (/api/...).
+ * 3. Injects JWT Bearer token if present.
+ */
 async function fetchJson<T>(endpoint: string, options?: RequestInit): Promise<T> {
-  const url = `${API_BASE}${endpoint}`;
+  const primaryBase = getActiveBackendUrl();
   const token = getStoredToken();
   const headers: Record<string, string> = {
     'Content-Type': 'application/json',
@@ -32,24 +61,58 @@ async function fetchJson<T>(endpoint: string, options?: RequestInit): Promise<T>
     headers['Authorization'] = `Bearer ${token}`;
   }
 
+  const primaryUrl = `${primaryBase}${endpoint}`;
+  const fallbackUrl = endpoint; // Relative path proxied by Next.js rewrites on Vercel
+
+  let lastError: any = null;
+
+  // Primary Attempt: Direct connection to backend
   try {
-    const res = await fetch(url, {
+    const res = await fetch(primaryUrl, {
       ...options,
       headers,
     });
-    if (!res.ok) {
-      const errData = await res.json().catch(() => null);
-      const errMsg = errData?.error || errData?.detail || `API Error ${res.status}: ${res.statusText}`;
-      throw new Error(errMsg);
+    if (res.ok) {
+      return await res.json();
     }
-    return await res.json();
-  } catch (error) {
-    console.warn(`[RescueGrid API] Error fetching ${endpoint}:`, error);
-    throw error;
+    const errData = await res.json().catch(() => null);
+    const errMsg = errData?.error || errData?.detail || `API Error ${res.status}: ${res.statusText}`;
+    lastError = new Error(errMsg);
+
+    // If client error (400, 401, 403, 422), do not retry fallback
+    if (res.status >= 400 && res.status < 500 && res.status !== 404) {
+      throw lastError;
+    }
+  } catch (err: any) {
+    lastError = err;
   }
+
+  // Fallback Attempt: If primary failed and fallback is distinct
+  if (primaryUrl !== fallbackUrl && typeof window !== 'undefined') {
+    try {
+      const res = await fetch(fallbackUrl, {
+        ...options,
+        headers,
+      });
+      if (res.ok) {
+        return await res.json();
+      }
+      const errData = await res.json().catch(() => null);
+      const errMsg = errData?.error || errData?.detail || `Fallback Error ${res.status}: ${res.statusText}`;
+      throw new Error(errMsg);
+    } catch (fallbackErr) {
+      console.warn(`[RescueGrid API] Both primary (${primaryUrl}) and fallback (${fallbackUrl}) failed for ${endpoint}:`, {
+        primary: lastError?.message || lastError,
+        fallback: (fallbackErr as any)?.message || fallbackErr,
+      });
+    }
+  }
+
+  throw lastError || new Error(`Failed to fetch ${endpoint}`);
 }
 
 export const api = {
+  getBaseUrl: getActiveBackendUrl,
   // Auth
   getSeedUsers: () =>
     fetchJson<{ success: boolean; users: Array<AuthUser & { password: string }> }>('/api/auth/seed-users'),

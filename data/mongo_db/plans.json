@@ -748,6 +748,324 @@
     "createdAt": "2026-09-17T14:29:44.577484"
   },
   {
+    "planId": "PLAN-RG-2026-0001-v12",
+    "incidentId": "RG-2026-0001",
+    "version": 12,
+    "actions": [
+      {
+        "id": "ACT-v12-1",
+        "title": "Establish North Service Road Emergency Corridor",
+        "agent": "TRAFFIC",
+        "priority": "CRITICAL",
+        "description": "Reroute incoming ALS ambulances via Exit 42B North bypass due to confirmed main lane obstruction.",
+        "estimatedTime": "Immediate (2 min)",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v12-2",
+        "title": "Deploy Class B Foam Fire Suppression",
+        "agent": "RESCUE",
+        "priority": "CRITICAL",
+        "description": "Suppress active vehicle fire before initiating hydraulic extrication to safeguard victims.",
+        "estimatedTime": "3 - 5 min",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v12-3",
+        "title": "Expand Perimeter and Re-triage Red-Tier Casualties",
+        "agent": "MEDICAL",
+        "priority": "HIGH",
+        "description": "Relocate triage area to 150m upwind buffer zone due to thermal and smoke drift.",
+        "estimatedTime": "5 min",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v12-4",
+        "title": "Dispatch Secondary Mutual Aid Pumper Unit",
+        "agent": "RESOURCE",
+        "priority": "HIGH",
+        "description": "Mobilize auxiliary water supply tender to back up primary attack line.",
+        "estimatedTime": "8 - 12 min",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v12-5",
+        "title": "Broadcast Urgent Highway Detour SITREP",
+        "agent": "COMMUNICATION",
+        "priority": "MEDIUM",
+        "description": "Update traffic advisory radio and navigation services regarding total corridor shutdown.",
+        "estimatedTime": "Immediate",
+        "requiresApproval": false,
+        "approved": false
+      }
+    ],
+    "rationale": "Plan v12 triggered by: Manual Operator Analysis Request. Fire escalation and primary lane blockage necessitate immediate rerouting of ambulances and heavy foam suppression attack.",
+    "primaryObjective": "Contain active vehicle fire and redirect incoming units via North Service Road corridor.",
+    "uncertainties": [
+      "Structural integrity of burned vehicle compartment before extrication.",
+      "Exact clearance time for blocked highway lanes."
+    ],
+    "createdBy": "COMMANDER_AGENT",
+    "status": "PROPOSED",
+    "approvedBy": null,
+    "approvalNotes": null,
+    "createdAt": "2026-09-17T16:16:46.132918"
+  },
+  {
+    "planId": "PLAN-RG-2026-0001-v13",
+    "incidentId": "RG-2026-0001",
+    "version": 13,
+    "actions": [
+      {
+        "id": "ACT-v13-1",
+        "title": "Establish Hot Zone and Deploy Suppressive Standby Line",
+        "agent": "Rescue Agent",
+        "priority": "CRITICAL",
+        "description": "Enforce a strict 100-foot hot zone isolation perimeter around the smoking vehicle and deploy a dry chemical and foam standby line 50 feet upwind to mitigate thermal escalation.",
+        "estimatedTime": "5 minutes",
+        "requiresApproval": false,
+        "approved": false
+      },
+      {
+        "id": "ACT-v13-2",
+        "title": "Secure Emergency Ingress and Divert Civilian Traffic",
+        "agent": "Traffic Agent",
+        "priority": "CRITICAL",
+        "description": "Establish emergency responder access utilizing hard shoulders or counter-flow routes, and work with State Police to divert civilian traffic at the final exit prior to MM 142 to preserve an open evacuation corridor.",
+        "estimatedTime": "10 minutes",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v13-3",
+        "title": "Mobilize Heavy Extrication and ALS Mutual Aid Units",
+        "agent": "Resource Agent",
+        "priority": "CRITICAL",
+        "description": "Request and dispatch 3 ALS ambulances, 1 BLS unit, 1 Heavy Rescue tender with hydraulic cutters, and 1 Fire Suppression pumper (750-gallon water tank/foam capabilities) to Staging Area Alpha.",
+        "estimatedTime": "8 minutes",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v13-4",
+        "title": "Establish Upwind Medical Staging and Conduct Triage",
+        "agent": "Medical Agent",
+        "priority": "HIGH",
+        "description": "Establish an upwind, uphill Medical Staging Area at a safe distance from the smoking vehicle, and execute primary START/SALT triage on arrival to verify patient acuity.",
+        "estimatedTime": "12 minutes",
+        "requiresApproval": false,
+        "approved": false
+      },
+      {
+        "id": "ACT-v13-5",
+        "title": "Establish Incident Command Post (ICP) and Unified Command",
+        "agent": "Communication Agent",
+        "priority": "HIGH",
+        "description": "Formally establish an on-scene ICP to coordinate multi-agency fire, medical, rescue, and police assets under Unified Command, implementing Traffic Incident Management (TIM) protocols.",
+        "estimatedTime": "15 minutes",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v13-6",
+        "title": "Integrate Live Telemetry and Monitor Secondary Hazards",
+        "agent": "Monitor Agent",
+        "priority": "MEDIUM",
+        "description": "Integrate live DOT sensor telemetry and traffic cameras to assess lane blockages, track tailback queues, and continuously evaluate the smoking vehicle for active ignition signs.",
+        "estimatedTime": "10 minutes",
+        "requiresApproval": false,
+        "approved": false
+      }
+    ],
+    "rationale": "A multi-vehicle highway pileup with trapped occupants and a smoking vehicle presents an immediate risk of thermal escalation (fire) and toxic exposure, compounded by the high risk of secondary collisions on a high-speed corridor. This plan resolves the tactical conflict of gridlocked access by utilizing hard shoulder/counter-flow routing, protects the scene via a strict hot-zone perimeter, and coordinates mutual aid resources to ensure heavy rescue and ALS transport are staged and deployed effectively.",
+    "primaryObjective": "Rapidly extricate and stabilize two trapped, critically injured casualties while suppressing active vehicle smoke hazards, securing an ingress/egress corridor on I-95, and establishing unified command.",
+    "uncertainties": [
+      "Source and classification of vehicle smoke (active engine compartment fire vs. radiator steam or coolant release).",
+      "Presence of high-voltage electric vehicle (EV) battery packs and the structural load-bearing integrity of the compromised highway barrier.",
+      "Exact number of usable lanes remaining open and real-time congestion tailback length due to a lack of live DOT telemetry.",
+      "Real-time availability of off-duty volunteer personnel and regional mutual aid transit delays."
+    ],
+    "createdBy": "COMMANDER_AGENT",
+    "status": "APPROVED",
+    "approvedBy": "Operator_Alpha",
+    "approvalNotes": "Verified safe staging area with local dispatch.",
+    "createdAt": "2026-09-19T17:21:09.336272"
+  },
+  {
+    "planId": "PLAN-RG-2026-0001-v14",
+    "incidentId": "RG-2026-0001",
+    "version": 14,
+    "actions": [
+      {
+        "id": "ACT-v14-1",
+        "title": "Establish Emergency Access Corridor & Traffic Diversion",
+        "agent": "Traffic Agent",
+        "priority": "Critical",
+        "description": "Utilize hard shoulders and tactical counter-flow routes to bypass northbound queues for emergency vehicle ingress. Implement civilian traffic diversion at the final exit prior to MM 142.",
+        "estimatedTime": "10 minutes",
+        "requiresApproval": false,
+        "approved": false
+      },
+      {
+        "id": "ACT-v14-2",
+        "title": "Deploy Fire Suppression & Cool Adjacent Fuel Source",
+        "agent": "Rescue Agent",
+        "priority": "Critical",
+        "description": "Deploy a fire suppression pumper with a charged 1.75-inch foam/water line upwind to suppress the active vehicle fire and cool the adjacent vehicle fuel tank to prevent secondary explosion.",
+        "estimatedTime": "15 minutes",
+        "requiresApproval": false,
+        "approved": false
+      },
+      {
+        "id": "ACT-v14-3",
+        "title": "Enforce 150-Meter Cordon & Establish Warm/Cold Zones",
+        "agent": "Monitor Agent",
+        "priority": "Critical",
+        "description": "Establish a strict 150m safety cordon around the burning vehicle due to thermal hazard warnings. Restrict the hot zone to SCBA-equipped personnel, and set up warm/cold zones outside this boundary.",
+        "estimatedTime": "5 minutes",
+        "requiresApproval": false,
+        "approved": false
+      },
+      {
+        "id": "ACT-v14-4",
+        "title": "Establish Upwind Medical Staging & Mobilize Mutual Aid",
+        "agent": "Medical Agent",
+        "priority": "High",
+        "description": "Set up an upwind, uphill Medical Staging Area at a safe distance. Request 3 ALS ambulances and 1 BLS unit from Resource Agent, preparing for immediate START/SALT triage of 6 occupants.",
+        "estimatedTime": "15 minutes",
+        "requiresApproval": false,
+        "approved": false
+      },
+      {
+        "id": "ACT-v14-5",
+        "title": "Execute Hydraulic Extrication of Trapped Casualties",
+        "agent": "Rescue Agent",
+        "priority": "High",
+        "description": "Deploy heavy rescue hydraulic cutters, spreaders, and cribbing to extricate the two trapped critical occupants as soon as fire suppression achieves safe ambient temperatures.",
+        "estimatedTime": "25 minutes",
+        "requiresApproval": false,
+        "approved": false
+      },
+      {
+        "id": "ACT-v14-6",
+        "title": "Issue Public Diversion Broadcasts & Alert Trauma Centers",
+        "agent": "Communication Agent",
+        "priority": "Medium",
+        "description": "Transmit ICS-201 Incident Briefing to regional dispatch and alert regional burn units. Issue a public emergency broadcast warning drivers to avoid the I-95 corridor for 4 hours.",
+        "estimatedTime": "10 minutes",
+        "requiresApproval": true,
+        "approved": false
+      }
+    ],
+    "rationale": "The tactical situation has escalated due to an active vehicle fire with thermal exposure near a fuel tank, compounded by a blocked primary access lane on I-95. To ensure responder and victim safety, we resolve the spatial conflict between Rescue's 100-ft Hot Zone and Monitor's findings by enforcing a larger, more conservative 150-meter safety cordon due to potential explosion/BLEVE hazards. Access must be immediately established using hard shoulders/counter-flow to allow heavy rescue and fire assets to reach the scene.",
+    "primaryObjective": "Suppress the active vehicle fire to mitigate explosion risks, secure emergency access via tactical routing, safely extricate two trapped critical patients, and manage multi-agency staging and public traffic diversions.",
+    "uncertainties": [
+      "Presence of alternative fuel systems (e.g., EV batteries) that could cause thermal runaway or re-ignition.",
+      "Exact anatomical injuries and airway stability of the two trapped 'Red' status patients.",
+      "True flow rates and bottleneck severity on secondary arterial detour routes.",
+      "Real-time transit delay times for incoming mutual aid resources."
+    ],
+    "createdBy": "COMMANDER_AGENT",
+    "status": "PROPOSED",
+    "approvedBy": null,
+    "approvalNotes": null,
+    "createdAt": "2026-09-19T17:23:05.466053"
+  },
+  {
+    "planId": "PLAN-RG-2026-0001-v15",
+    "incidentId": "RG-2026-0001",
+    "version": 15,
+    "actions": [
+      {
+        "id": "ACT-v15-1",
+        "title": "Resolve Coordinate Mismatch and Clarify Target Location",
+        "agent": "Traffic Agent",
+        "priority": "CRITICAL",
+        "description": "Immediately contact dispatch to resolve the conflict between the digital coordinates (37.7749, -122.4194) and the textual description (I-95 Northbound MM 142) to ensure regional routing engines guide East Coast responders to the correct physical location.",
+        "estimatedTime": "2 minutes",
+        "requiresApproval": false,
+        "approved": false
+      },
+      {
+        "id": "ACT-v15-2",
+        "title": "Establish Fire Suppression Barrier and Scene Safety Zones",
+        "agent": "Rescue Agent",
+        "priority": "CRITICAL",
+        "description": "Deploy a charged 1.75-inch handline to suppress active fire and create a protective barrier for trapped occupants. Establish strict Hot Zone (minimum 100 ft, full PPE/SCBA), Warm Zone (tool staging), and Cold Zone (command/triage) perimeters. Warn civilians to stay clear.",
+        "estimatedTime": "5 minutes",
+        "requiresApproval": false,
+        "approved": false
+      },
+      {
+        "id": "ACT-v15-3",
+        "title": "Initiate Ingress Emergency Routing and Civilian Diversions",
+        "agent": "Traffic Agent",
+        "priority": "HIGH",
+        "description": "Coordinate with State Police/DOT to establish emergency responder ingress routes utilizing southbound lane contraflow or designated median crossovers upstream of MM 142 to bypass the total lane blockage. Divert civilian traffic at the nearest exit prior to MM 142.",
+        "estimatedTime": "10 minutes",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v15-4",
+        "title": "Deploy Heavy Rescue for Patient Extrication",
+        "agent": "Rescue Agent",
+        "priority": "HIGH",
+        "description": "Dispatch and deploy heavy rescue units equipped with hydraulic extrication tools (cutters, spreaders, rams) to safely extricate trapped occupants, prioritizing those designated as Red/Immediate status.",
+        "estimatedTime": "15 minutes",
+        "requiresApproval": false,
+        "approved": false
+      },
+      {
+        "id": "ACT-v15-5",
+        "title": "Establish Medical Staging Area and Execute START Triage",
+        "agent": "Medical Agent",
+        "priority": "HIGH",
+        "description": "Establish a Medical Staging Area positioned upwind and uphill in the Cold Zone. Prepare 3 ALS transport units and execute rapid START triage immediately upon firefighter access to confirm and stabilize patient priorities.",
+        "estimatedTime": "8 minutes",
+        "requiresApproval": false,
+        "approved": false
+      },
+      {
+        "id": "ACT-v15-6",
+        "title": "Mobilize and Stage Resource Apparatus Allocation",
+        "agent": "Resource Agent",
+        "priority": "MEDIUM",
+        "description": "Authorize the mobilization of 3 ALS Ambulances, 2 Heavy Rescue Engines, 1 Water Tender, and 3 Police Escorts. Stage heavy apparatus closest to the hot zone and position secondary support at the nearest upstream interchange.",
+        "estimatedTime": "10 minutes",
+        "requiresApproval": true,
+        "approved": false
+      },
+      {
+        "id": "ACT-v15-7",
+        "title": "Establish Incident Command and Initiate ICS-201",
+        "agent": "Communication Agent",
+        "priority": "MEDIUM",
+        "description": "Establish formal Incident Command on-scene, initiate the ICS-201 Incident Briefing, and maintain open radio channels to monitor the clinical status of the injured and the cause of the vehicle smoke.",
+        "estimatedTime": "5 minutes",
+        "requiresApproval": false,
+        "approved": false
+      }
+    ],
+    "rationale": "The combination of trapped occupants, active fire, and total highway lane blockage presents an immediate threat to life. The first priority is to resolve the severe coordinate mismatch (San Francisco coordinates vs. I-95 East Coast text) to prevent responders from being misrouted. Concurrently, fire suppression must establish a protective barrier to allow heavy rescue teams to safely extricate the 6 casualties (including 2 Red-category patients) using alternative ingress routes (contraflow/median crossovers) to bypass the gridlock.",
+    "primaryObjective": "Coordinate immediate life-safety rescue, active fire suppression, and medical triage at the confirmed East Coast I-95 Mile Marker 142 location, resolving the critical geospatial coordinate conflict to ensure accurate responder routing.",
+    "uncertainties": [
+      "Resolution of the geospatial mismatch between the digital coordinates (San Francisco, CA) and the physical location (I-95 Northbound, MM 142 on the US East Coast).",
+      "Exact clinical vital signs, airway status, and entrapment severity of the 6 casualties (specifically whether the 2 Red-category patients are trapped in the vehicle actively emitting smoke/fire).",
+      "The presence of secondary hazards, including fuel leaks, alternative power sources (EV/hybrid batteries), or hazardous cargo among the entangled vehicles.",
+      "Actual traffic queue lengths and delays due to a lack of live telemetry on-scene."
+    ],
+    "createdBy": "COMMANDER_AGENT",
+    "status": "PROPOSED",
+    "approvedBy": null,
+    "approvalNotes": null,
+    "createdAt": "2026-09-19T17:42:51.659482"
+  },
+  {
     "planId": "PLAN-RG-2026-0002-v1",
     "incidentId": "RG-2026-0002",
     "version": 1,

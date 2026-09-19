@@ -348,6 +348,108 @@
     "metadata": {}
   },
   {
+    "logId": "LOG-B58260C7",
+    "incidentId": "RG-2026-0001",
+    "actor": "SYSTEM:ORCHESTRATOR",
+    "action": "PIPELINE_STARTED",
+    "summary": "Multi-agent collaborative cycle triggered: Manual Operator Analysis Request",
+    "timestamp": "2026-09-17T16:16:43.095361",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-AFB64343",
+    "incidentId": "RG-2026-0001",
+    "actor": "AGENT:COMMANDER",
+    "action": "PLAN_PROPOSED_v12",
+    "summary": "Commander formulated Response Plan v12: Contain active vehicle fire and redirect incoming units via North Service Road corridor.",
+    "timestamp": "2026-09-17T16:16:46.146303",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-B17B7421",
+    "incidentId": "RG-2026-0001",
+    "actor": "SYSTEM:SIMULATION",
+    "action": "SCENARIO_LOADED",
+    "summary": "Flagship Hackathon Scenario initialized (RG-2026-0001)",
+    "timestamp": "2026-09-19T17:18:31.489588",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-8168954D",
+    "incidentId": "RG-2026-0001",
+    "actor": "SYSTEM:ORCHESTRATOR",
+    "action": "PIPELINE_STARTED",
+    "summary": "Multi-agent collaborative cycle triggered: Initial Flagship Simulation Pipeline Execution",
+    "timestamp": "2026-09-19T17:18:31.490362",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-1F5F2D0B",
+    "incidentId": "RG-2026-0001",
+    "actor": "AGENT:COMMANDER",
+    "action": "PLAN_PROPOSED_v13",
+    "summary": "Commander formulated Response Plan v13: Rapidly extricate and stabilize two trapped, critically injured casualties while suppressing active vehicle smoke hazards, securing an ingress/egress corridor on I-95, and establishing unified command.",
+    "timestamp": "2026-09-19T17:21:09.340092",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-D0C70029",
+    "incidentId": "RG-2026-0001",
+    "actor": "HUMAN:Operator_Alpha",
+    "action": "PLAN_APPROVED",
+    "summary": "Operator Operator_Alpha plan approved for Plan v13 (Notes: Verified safe staging area with local dispatch.)",
+    "timestamp": "2026-09-19T17:21:09.619749",
+    "metadata": {
+      "version": 13,
+      "approved": true
+    }
+  },
+  {
+    "logId": "LOG-0F5BE015",
+    "incidentId": "RG-2026-0001",
+    "actor": "HUMAN:OPERATOR",
+    "action": "UPDATE_INJECTED_SIMULATION",
+    "summary": "Simulation update injected: Fire is now reported in one vehicle, and the primary access lane is blocked.",
+    "timestamp": "2026-09-19T17:21:09.629814",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-B30C819D",
+    "incidentId": "RG-2026-0001",
+    "actor": "SYSTEM:ORCHESTRATOR",
+    "action": "PIPELINE_STARTED",
+    "summary": "Multi-agent collaborative cycle triggered: Reassessment from injected update: Fire is now reported in one vehicle, and the primary access lane is blocked.",
+    "timestamp": "2026-09-19T17:21:09.631319",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-883304C9",
+    "incidentId": "RG-2026-0001",
+    "actor": "AGENT:COMMANDER",
+    "action": "PLAN_PROPOSED_v14",
+    "summary": "Commander formulated Response Plan v14: Suppress the active vehicle fire to mitigate explosion risks, secure emergency access via tactical routing, safely extricate two trapped critical patients, and manage multi-agency staging and public traffic diversions.",
+    "timestamp": "2026-09-19T17:23:05.473065",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-9933F817",
+    "incidentId": "RG-2026-0001",
+    "actor": "SYSTEM:ORCHESTRATOR",
+    "action": "PIPELINE_STARTED",
+    "summary": "Multi-agent collaborative cycle triggered: Manual Operator Analysis Request",
+    "timestamp": "2026-09-19T17:40:40.953893",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-3D473161",
+    "incidentId": "RG-2026-0001",
+    "actor": "AGENT:COMMANDER",
+    "action": "PLAN_PROPOSED_v15",
+    "summary": "Commander formulated Response Plan v15: Coordinate immediate life-safety rescue, active fire suppression, and medical triage at the confirmed East Coast I-95 Mile Marker 142 location, resolving the critical geospatial coordinate conflict to ensure accurate responder routing.",
+    "timestamp": "2026-09-19T17:42:51.665266",
+    "metadata": {}
+  },
+  {
     "logId": "LOG-RG-2026-0002-INIT",
     "incidentId": "RG-2026-0002",
     "actor": "SYSTEM:ORCHESTRATOR",
@@ -435,6 +537,60 @@
     "action": "USER_REGISTER",
     "summary": "New personnel registered: Lt. Test Operator (DISPATCHER)",
     "timestamp": "2026-09-17T14:29:45.045844",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-28A17213",
+    "incidentId": "SYSTEM",
+    "actor": "Chief Sarah Jenkins",
+    "action": "USER_LOGIN",
+    "summary": "Personnel authenticated via JWT: Chief Sarah Jenkins (COMMANDER_OPERATOR)",
+    "timestamp": "2026-09-19T17:23:05.736137",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-4DBC78CE",
+    "incidentId": "SYSTEM",
+    "actor": "Lt. Test Operator",
+    "action": "USER_REGISTER",
+    "summary": "New personnel registered: Lt. Test Operator (DISPATCHER)",
+    "timestamp": "2026-09-19T17:23:05.970563",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-18D38C88",
+    "incidentId": "SYSTEM",
+    "actor": "Chief Sarah Jenkins",
+    "action": "USER_LOGIN",
+    "summary": "Personnel authenticated via JWT: Chief Sarah Jenkins (COMMANDER_OPERATOR)",
+    "timestamp": "2026-09-19T17:39:53.245894",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-DD5CF1B9",
+    "incidentId": "SYSTEM",
+    "actor": "Marcus Vance",
+    "action": "USER_LOGIN",
+    "summary": "Personnel authenticated via JWT: Marcus Vance (DISPATCHER)",
+    "timestamp": "2026-09-19T17:39:56.020271",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-510A956B",
+    "incidentId": "SYSTEM",
+    "actor": "Marcus Vance",
+    "action": "USER_LOGOUT",
+    "summary": "Personnel session closed: Marcus Vance",
+    "timestamp": "2026-09-19T17:39:58.070257",
+    "metadata": {}
+  },
+  {
+    "logId": "LOG-7249E000",
+    "incidentId": "SYSTEM",
+    "actor": "Test",
+    "action": "USER_REGISTER",
+    "summary": "New personnel registered: Test (COMMANDER_OPERATOR)",
+    "timestamp": "2026-09-19T17:40:13.752314",
     "metadata": {}
   }
 ]

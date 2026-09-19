@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import {
   Incident,
   MapMarker,
@@ -107,6 +107,7 @@ function DashboardApp() {
   const [allPlans, setAllPlans] = useState<ResponsePlan[]>([DEFAULT_PLAN]);
   const [timeline, setTimeline] = useState<AuditLog[]>([]);
   const [systemHealth, setSystemHealth] = useState<SystemHealth | null>(null);
+  const realIncidentsLoadedRef = useRef(false);
 
   // Modals
   const [isSimulationOpen, setIsSimulationOpen] = useState(false);
@@ -150,10 +151,11 @@ function DashboardApp() {
     }
   }, []);
 
-  // Initial Load
+  // Initial Load & Automatic Reconnection Loop
   useEffect(() => {
     let isMounted = true;
-    const initSystem = async () => {
+
+    const fetchInitial = async () => {
       try {
         const [healthData, incList] = await Promise.all([
           api.getHealth().catch(() => null),
@@ -164,6 +166,7 @@ function DashboardApp() {
         if (healthData) setSystemHealth(healthData);
 
         if (incList && incList.length > 0) {
+          realIncidentsLoadedRef.current = true;
           setIncidents(incList);
           const first = incList[0];
           setActiveIncident(first);
@@ -176,14 +179,44 @@ function DashboardApp() {
       }
     };
 
-    initSystem();
+    fetchInitial();
+
+    // Reconnection & Keep-Alive sync (re-checks health and syncs real data when Render wakes up)
+    const keepAliveInterval = setInterval(async () => {
+      if (!isMounted) return;
+      try {
+        const health = await api.getHealth().catch(() => null);
+        if (health && isMounted) {
+          setSystemHealth(health);
+        }
+
+        // If real incidents haven't loaded yet, try fetching again
+        if (!realIncidentsLoadedRef.current && isMounted) {
+          const incList = await api.getIncidents().catch(() => []);
+          if (incList && incList.length > 0 && isMounted) {
+            realIncidentsLoadedRef.current = true;
+            setIncidents(incList);
+            setActiveIncident((curr) => {
+              if (!curr || curr.incidentId === DEFAULT_INCIDENT.incidentId) {
+                loadIncidentData(incList[0].incidentId);
+                return incList[0];
+              }
+              return curr;
+            });
+          }
+        }
+      } catch {
+        // Silent catch for background poll
+      }
+    }, 12000);
 
     return () => {
       isMounted = false;
+      clearInterval(keepAliveInterval);
     };
   }, [loadIncidentData]);
 
-  // Periodic Telemetry Sync
+  // Periodic Telemetry Sync for active incident
   useEffect(() => {
     if (!activeIncident?.incidentId) return;
 
@@ -460,7 +493,7 @@ function DashboardApp() {
                 RescueGrid AI Platform Diagnostics
               </h2>
               <div className="text-xs text-slate-400 space-y-2">
-                <p>FastAPI Backend: http://localhost:8000/api</p>
+                <p>FastAPI Backend: {api.getBaseUrl()}/api</p>
                 <p>Gemini AI Status: {systemHealth?.services?.geminiAiReasoning?.status || 'ONLINE'}</p>
                 <p>MOSS Context Status: {systemHealth?.services?.mossSharedContext?.status || 'ONLINE'}</p>
                 <p>LiveKit Collaboration: {systemHealth?.services?.livekitCollaboration?.status || 'ONLINE'}</p>

@@ -1,123 +1,115 @@
 [
   {
-    "resultId": "RES-MED-192053AB",
+    "resultId": "RES-MED-51DC2E23",
     "incidentId": "RG-2026-0001",
     "agentName": "MEDICAL",
     "findings": [
-      "Reported 6 individuals involved with potential high-impact trauma.",
-      "High probability of blunt force deceleration trauma given multi-vehicle highway collision.",
-      "Critical vulnerability window for occupants in smoking or damaged vehicles."
+      "Preliminary triage category estimation: 2 Red/Immediate (serious injuries/trapped occupants), 2 Yellow/Delayed (moderate trauma), and 2 Green/Minor (walking wounded) out of 6 total involved individuals.",
+      "Active fire and smoking vehicle create high risk for acute smoke inhalation, thermal injuries, and rapid secondary trauma for trapped occupants.",
+      "High-speed multi-vehicle crash mechanism presents elevated risk for severe blunt force trauma, occult internal bleeding, and spinal injury."
     ],
     "recommendations": [
-      "Deploy Advanced Life Support (ALS) triage station at designated safe perimeter staging zone.",
-      "Prepare 2 Rapid Transport Medical Helicopters on standby for critical red-tier casualties.",
-      "Establish on-scene START (Simple Triage and Rapid Treatment) sorting corridor immediately upon arrival."
+      "Establish a Medical Staging Area positioned upwind and uphill at a safe perimeter from active fire and smoking hazards.",
+      "Dispatch Advanced Life Support (ALS) transport units prioritized for immediate extrication and trauma stabilization of Red-category casualties.",
+      "Execute rapid START (Simple Triage and Rapid Treatment) triage immediately upon firefighter access to confirm patient priority status.",
+      "Coordinate with traffic management to secure dedicated egress corridors through partial/total lane blockages for rapid hospital transport."
     ],
     "uncertainty": [
-      "Exact number of non-ambulatory trapped victims remains unconfirmed by on-scene personnel.",
-      "Vital signs and Glasgow Coma Scale (GCS) unknown; estimates based solely on caller reports."
+      "Exact clinical vital signs, airway status, and neurological function of all 6 individuals are unconfirmed prior to direct evaluation.",
+      "Unclear whether the 2 seriously injured individuals are trapped inside the vehicle actively smoking or exposed to fire.",
+      "Unknown if additional uncounted passengers or hazardous materials are present within the involved vehicles."
     ],
-    "contextReferences": [
-      "CTX-19F5ACFF",
-      "CTX-B684361C",
-      "CTX-0C9868F4"
-    ],
+    "contextReferences": [],
     "status": "COMPLETED",
     "urgencyScore": 9,
     "data": {
       "triageFocus": "Trauma & Airway Protection",
       "recommendedUnits": 3
     },
-    "createdAt": "2026-09-17T14:29:37.573449"
+    "createdAt": "2026-09-19T17:40:56.519955"
   },
   {
-    "resultId": "RES-RSC-65EE8C12",
+    "resultId": "RES-RSC-C8DCC3B0",
     "incidentId": "RG-2026-0001",
     "agentName": "RESCUE",
     "findings": [
-      "Vehicle entanglement and structural cabin collapse likely requiring hydraulic cutting tools (Jaws of Life).",
-      "Thermal runaway and smoke emissions indicate immediate ignition risk to surrounding fuel lines.",
-      "Structural stability of highway barrier and surrounding vehicles compromised."
+      "High-risk multi-vehicle pileup on Interstate 95 involving 3 vehicles, 6 casualties, active fire indicators, and trapped occupants.",
+      "Presence of trapped occupants and active fire/smoking vehicle hazards requires immediate heavy rescue, hydraulic extrication, and fire suppression.",
+      "Severe vehicular deformation is likely given high-speed interstate impact and reported trapped individuals.",
+      "Major traffic bottleneck with total and partial lane blockages creates significant risk for secondary collisions."
     ],
     "recommendations": [
-      "Deploy Heavy Rescue squad equipped with hydraulic spreaders and cutters.",
-      "Charge two 1.75-inch attack hose lines with Class B foam for rapid vapor suppression.",
-      "Enforce strict 100-foot hot zone isolation perimeter around smoking vehicle."
+      "Establish strict perimeter safety boundaries: Hot Zone (minimum 100 ft/30m around active fire and extrication site, full PPE/SCBA required), Warm Zone (extrication tool staging and hose line backup), and Cold Zone (command, EMS triage, traffic staging).",
+      "STRICT SAFETY WARNING: Advise all untrained civilians and bystanders to stay clear and NEVER enter smoking/burning vehicles or hazardous structural crash zones.",
+      "Dispatch heavy rescue unit with hydraulic extrication equipment (cutters, spreaders, rams) and deploy a charged 1.75-inch handline for fire protection during extrication.",
+      "Initiate full upstream highway traffic control and emergency lane closures to protect first responders and approaching traffic.",
+      "Perform immediate START triage upon site safety stabilization, prioritizing immediate transport for the 2 critically injured occupants."
     ],
     "uncertainty": [
-      "Presence of electric vehicle high-voltage battery packs unverified.",
-      "Structural load-bearing condition of overturned vehicle unknown."
+      "Exact nature and extent of vehicle structural deformation and specific extrication techniques required (e.g., dash roll vs. door pop).",
+      "Status of fuel leaks, alternative power sources (EV/hybrid batteries), or hazardous materials involved in the pileup.",
+      "Exact clinical stability and airway status of trapped occupants prior to entry."
     ],
-    "contextReferences": [
-      "CTX-804C9C25",
-      "CTX-BE6B2664",
-      "CTX-2691FE40"
-    ],
+    "contextReferences": [],
     "status": "COMPLETED",
-    "urgencyScore": 10,
+    "urgencyScore": 9,
     "data": {
       "extricationRequired": true,
       "hotZoneRadiusMeters": 35
     },
-    "createdAt": "2026-09-17T14:29:38.759780"
+    "createdAt": "2026-09-19T17:41:03.870590"
   },
   {
-    "resultId": "RES-TRF-ECB73E84",
+    "resultId": "RES-TRF-18D9CC6B",
     "incidentId": "RG-2026-0001",
     "agentName": "TRAFFIC",
     "findings": [
-      "Primary highway lanes reported obstructed by multi-vehicle collision debris.",
-      "Primary access ramp blocked by incident bottleneck; secondary service road remains viable.",
-      "Risk of secondary rear-end collisions in approaching traffic queue."
+      "A multi-vehicle pileup is reported on I-95 Northbound at Mile Marker 142, representing a severe highway bottleneck.",
+      "No live telemetry is currently active; traffic flow impacts and queue estimations are based on simulated routing models and standard map-provider baseline data.",
+      "A critical geospatial mismatch has been detected: the provided coordinates (37.7749, -122.4194) map to San Francisco, CA, whereas Interstate 95 is physically located on the US East Coast. Routing is simulated based on the text description (I-95 MM 142) pending resolution."
     ],
     "recommendations": [
-      "Establish emergency-only corridor via North Service Road (Exit 42B) for inbound ambulances.",
-      "Deploy Department of Transportation variable message signs 3 miles upstream warning drivers to divert.",
-      "Coordinate highway patrol rolling road block 1.5 miles prior to crash scene."
+      "Immediately clarify the coordinate mismatch with dispatch to ensure regional routing engines guide responders to the correct physical East Coast I-95 location.",
+      "Establish emergency responder ingress routes utilizing southbound lane contraflow or designated emergency crossovers upstream of MM 142.",
+      "Establish civilian evacuation corridors by diverting I-95 Northbound traffic at the nearest exit prior to MM 142 to prevent gridlock.",
+      "Request integration of local DOT traffic camera feeds or highway transponder telemetry to confirm actual lane blockages and backup length."
     ],
     "uncertainty": [
-      "Real-time congestion clearance rate depends on variable civilian driver compliance.",
-      "Exact lane clearance width for heavy ladder and rescue vehicles unverified."
+      "The physical location of the incident is highly uncertain due to the conflict between the textual location (I-95 MM 142) and the provided digital coordinates (San Francisco).",
+      "Actual traffic delay times and queue lengths are unverified due to the lack of live telemetry or on-scene responder feedback."
     ],
-    "contextReferences": [
-      "CTX-37BE2520",
-      "CTX-0F29E877",
-      "CTX-5271E386"
-    ],
+    "contextReferences": [],
     "status": "COMPLETED",
     "urgencyScore": 9,
     "data": {
       "primaryIngressCorridor": "Exit 42B North Access",
       "isPrimaryLaneBlocked": true
     },
-    "createdAt": "2026-09-17T14:29:39.988618"
+    "createdAt": "2026-09-19T17:41:26.757699"
   },
   {
-    "resultId": "RES-RSC-8AB122CD",
+    "resultId": "RES-RSC-E1E87E6F",
     "incidentId": "RG-2026-0001",
     "agentName": "RESOURCE",
     "findings": [
-      "Incident complexity level requires multi-agency mutual aid deployment.",
-      "Estimated resource shortfall in heavy extrication gear if multiple vehicles are crushed.",
-      "Staging Area Alpha (Exit 42 North) provides sufficient apron for 12 tactical vehicles."
+      "Critical multi-vehicle pileup on Interstate 95 involving at least 6 individuals requiring immediate medical and extrication response.",
+      "Highway location poses high risk of secondary collisions and severe traffic congestion, necessitating rapid staging and traffic management."
     ],
     "recommendations": [
-      "Request 3 Advanced Life Support (ALS) ambulances and 1 Basic Life Support (BLS) unit.",
-      "Stage 1 Heavy Rescue tender equipped with extrication hydraulic cutters.",
-      "Mobilize 1 Fire Suppression pumper with 750-gallon water tank and foam capabilities.",
-      "Request 2 Highway Patrol cruisers for highway corridor cordon."
+      "Advisory Apparatus Allocation: Dispatch 3 ALS Ambulances, 2 Heavy Rescue Engines (equipped with hydraulic extrication tools), 1 Water Tender (for fire suppression/washdown support), and 3 Police Escorts for traffic mitigation.",
+      "Establish Primary Staging Area at the nearest upstream I-95 interchange/exit ramp to secure clear ingress/egress corridors for emergency transport.",
+      "Staging Priority 1: Position Heavy Rescue Engines and primary ALS Ambulances closest to the hot zone for patient extrication and stabilization.",
+      "Staging Priority 2: Deploy Police Escorts to shut down approaching lanes and establish secondary perimeter control.",
+      "Staging Priority 3: Hold Water Tender and reserve medical units in cold zone staging until cleared for advance."
     ],
     "uncertainty": [
-      "Real-time availability of off-duty volunteer personnel unknown.",
-      "Mutual aid response transit times subject to regional weather and traffic delay."
+      "Unconfirmed whether any victims are currently trapped requiring prolonged extrication.",
+      "Potential presence of hazardous material leaks or compromised fuel tanks is currently unknown.",
+      "Exact lane blockages and optimal access direction (northbound vs. southbound) require on-scene confirmation."
     ],
-    "contextReferences": [
-      "CTX-804C9C25",
-      "CTX-5271E386",
-      "CTX-0F29E877"
-    ],
+    "contextReferences": [],
     "status": "COMPLETED",
-    "urgencyScore": 8,
+    "urgencyScore": 9,
     "data": {
       "recommendedApparatus": [
         "Ambulance ALS x3",
@@ -126,64 +118,67 @@
         "Patrol x2"
       ]
     },
-    "createdAt": "2026-09-17T14:29:41.167555"
+    "createdAt": "2026-09-19T17:41:36.340020"
   },
   {
-    "resultId": "RES-COM-C9197655",
+    "resultId": "RES-COM-E4E924A5",
     "incidentId": "RG-2026-0001",
     "agentName": "COMMUNICATION",
     "findings": [
-      "Incident classified as Multi-Agency Level 2 Highway Critical Incident.",
-      "Public inquiry volume anticipated due to major arterial highway closure.",
-      "Inter-agency radio interoperability required between EMS and Fire frequencies."
+      "A multi-vehicle collision involving three (3) passenger vehicles has occurred on Interstate 95.",
+      "A total of six (6) individuals are involved in the incident.",
+      "Two (2) individuals are reported to have sustained potentially serious injuries.",
+      "One (1) involved vehicle is actively emitting smoke, presenting an active fire/ignition hazard.",
+      "Interstate 95 travel lanes are partially blocked, creating a hazardous environment for responders and motorists."
     ],
     "recommendations": [
-      "Transmit ICS-201 Incident Briefing to regional dispatch and hospital trauma centers.",
-      "Issue public emergency broadcast warning drivers to avoid Highway corridor for 4 hours.",
-      "Designate Media Staging Area 500m West of Exit 42 to prevent interference with emergency vehicles."
+      "Establish Incident Command (IC) immediately and initiate the ICS-201 Incident Briefing.",
+      "Deploy Fire/Rescue units for scene stabilization, fire suppression, and potential extrication.",
+      "Dispatch EMS resources to establish a Triage/Treatment group for the two (2) priority patients.",
+      "Coordinate with State Police and Department of Transportation (DOT) to implement traffic control and establish a safe traffic incident management (TIM) zone.",
+      "Draft and disseminate a Public Information Officer (PIO) media release advising the public of lane closures and recommending alternative routes."
     ],
     "uncertainty": [
-      "Exact victim identities withheld pending family notification and triage confirmation."
+      "The exact cause of the smoke emitting from the vehicle (engine fire vs. ruptured coolant/fluid lines) is unconfirmed.",
+      "The clinical status and stability of the two injured individuals are pending formal triage assessment.",
+      "Whether any occupants are entrapped within the damaged vehicles remains unverified."
     ],
-    "contextReferences": [
-      "CTX-0C9868F4",
-      "CTX-499E24DF",
-      "CTX-0F29E877"
-    ],
+    "contextReferences": [],
     "status": "COMPLETED",
-    "urgencyScore": 7,
+    "urgencyScore": 9,
     "data": {
-      "sitrep": "SITREP 01: Critical highway collision at I-95 Northbound at Mile Marker 142. 6 casualties reported. Multi-agency response underway. Civilian detour in effect."
+      "sitrep": "INCIDENT ACTION SITUATION REPORT: Emergency services are responding to a critical multi-vehicle collision on Interstate 95 involving three vehicles and six occupants. Unified Command is being established to manage two priority medical patients and mitigate an active vehicle fire/smoke hazard. Portions of Interstate 95 are blocked; emergency personnel are working to secure the scene. Public Information Officers are advising motorists to seek alternate routes."
     },
-    "createdAt": "2026-09-17T14:29:42.312877"
+    "createdAt": "2026-09-19T17:41:50.743319"
   },
   {
-    "resultId": "RES-MON-66612515",
+    "resultId": "RES-MON-73659689",
     "incidentId": "RG-2026-0001",
     "agentName": "MONITOR",
     "findings": [
-      "Incident trajectory shifting from initial stabilization to active multi-threat containment.",
-      "Weather conditions indicate 12 mph crosswinds, potentially affecting smoke dispersal.",
-      "Compounding hazard detected: thermal heat signature adjacent to gasoline fuel tank."
+      "Immediate compound life-safety threat: ACTIVE_FIRE and SMOKING_VEHICLE detected alongside TRAPPED_OCCUPANTS, indicating acute risk of thermal injury or toxic smoke inhalation for trapped victims.",
+      "Critical logistical obstruction: TOTAL_LANE_BLOCKAGE combined with PARTIAL_ROAD_BLOCKAGE severely threatens emergency ingress for heavy extrication apparatus and water tankers.",
+      "High risk of rapid fire propagation to adjacent entangled vehicles in multi-vehicle density.",
+      "Secondary collision risk escalating upstream due to rapid queue formation on high-speed interstate corridor."
     ],
     "recommendations": [
-      "Trigger immediate tactical reassessment across all specialized agents.",
-      "Expand safety cordon from 50m to 150m immediately.",
-      "Alert regional burn unit and trauma center to prepare for potential surge."
+      "Prioritize rapid hose line deployment to establish a protective barrier between the ACTIVE_FIRE/SMOKING_VEHICLE and vehicles containing TRAPPED_OCCUPANTS.",
+      "Coordinate with state police/DOT to establish contraflow, shoulder, or median emergency access routes to bypass TOTAL_LANE_BLOCKAGE.",
+      "Request mutual aid for additional heavy rescue, extrication tools, and high-volume water tenders.",
+      "Pre-alert regional burn centers and level-1 trauma facilities for multi-casualty extrication with possible thermal/inhalation injuries.",
+      "Initiate dynamic upstream traffic diversion at previous exits to prevent high-speed secondary impacts."
     ],
     "uncertainty": [
-      "Rate of fire spread and potential hazardous materials in secondary vehicle trunk unverified."
+      "Precise headcount and entrapment severity of victims relative to the fire perimeter.",
+      "Presence of hazardous cargo or electric vehicle (EV) battery involvement among burning vehicles.",
+      "Availability and proximity of pressurized water sources on the interstate section."
     ],
-    "contextReferences": [
-      "CTX-B684361C",
-      "CTX-5271E386",
-      "CTX-BE6B2664"
-    ],
+    "contextReferences": [],
     "status": "COMPLETED",
-    "urgencyScore": 10,
+    "urgencyScore": 9,
     "data": {
       "escalationTriggered": true
     },
-    "createdAt": "2026-09-17T14:29:43.447668"
+    "createdAt": "2026-09-19T17:42:15.551184"
   }
 ]

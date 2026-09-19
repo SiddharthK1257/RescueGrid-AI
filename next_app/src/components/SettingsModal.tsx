@@ -3,6 +3,7 @@
 import React from 'react';
 import { Settings, X, Server, Brain, Radio, Database, ShieldCheck, MapPin } from 'lucide-react';
 import { SystemHealth } from '../types';
+import { api } from '../services/api';
 
 interface SettingsModalProps {
   isOpen: boolean;
@@ -42,7 +43,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                 <Server className="w-5 h-5 text-orange-400 mt-0.5" />
                 <div>
                   <div className="font-bold text-slate-200">Python FastAPI Backend</div>
-                  <div className="text-[11px] text-slate-400">Endpoint: http://localhost:8000/api</div>
+                  <div className="text-[11px] text-slate-400">Endpoint: {api.getBaseUrl()}/api</div>
                   <div className="text-[10px] text-slate-500">Autonomous Orchestrator & 7 Specialized Agents</div>
                 </div>
               </div>

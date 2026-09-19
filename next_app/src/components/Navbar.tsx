@@ -181,8 +181,22 @@ export const Navbar: React.FC<NavbarProps> = ({
 
         {/* System Health Indicators */}
         <div className="hidden lg:flex items-center space-x-1.5 bg-slate-900 px-2.5 py-1 rounded-lg border border-slate-800 text-[10px]">
-          <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-          <span className="text-slate-300 font-mono font-semibold">ALL SERVICES ONLINE</span>
+          {systemHealth?.status === 'ONLINE' ? (
+            <>
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span className="text-slate-300 font-mono font-semibold">ALL SERVICES ONLINE</span>
+            </>
+          ) : systemHealth ? (
+            <>
+              <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+              <span className="text-amber-300 font-mono font-semibold">SERVICES DEGRADED</span>
+            </>
+          ) : (
+            <>
+              <span className="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
+              <span className="text-slate-400 font-mono font-semibold">CONNECTING BACKEND...</span>
+            </>
+          )}
         </div>
 
         {/* Settings button */}

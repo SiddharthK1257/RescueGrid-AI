@@ -11,7 +11,7 @@
     "description": "Primary reported emergency site.",
     "isSimulated": true,
     "verificationStatus": "VERIFIED",
-    "createdAt": "2026-09-17T14:29:44.579729"
+    "createdAt": "2026-09-19T17:42:51.661742"
   },
   {
     "markerId": "MK-RG-2026-0001-STAGE",
@@ -25,7 +25,7 @@
     "description": "Safe perimeter buffer for incoming emergency vehicles and triage.",
     "isSimulated": true,
     "verificationStatus": "VERIFIED",
-    "createdAt": "2026-09-17T14:29:44.579729"
+    "createdAt": "2026-09-19T17:42:51.661742"
   },
   {
     "markerId": "MK-RG-2026-0001-ROADBLOCK",
@@ -39,7 +39,7 @@
     "description": "Reported lane obstruction. Incoming units reroute to secondary corridor.",
     "isSimulated": true,
     "verificationStatus": "UNVERIFIED",
-    "createdAt": "2026-09-17T14:29:44.579729"
+    "createdAt": "2026-09-19T17:42:51.661742"
   },
   {
     "markerId": "MK-RG-2026-0001-HAZARD",
@@ -53,7 +53,7 @@
     "description": "Smoke plume and thermal risk area. 150m cordon advised.",
     "isSimulated": true,
     "verificationStatus": "VERIFIED",
-    "createdAt": "2026-09-17T14:29:44.579729"
+    "createdAt": "2026-09-19T17:42:51.661742"
   },
   {
     "markerId": "MK-RG-2026-0002-01",

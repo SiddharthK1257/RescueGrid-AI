@@ -58,5 +58,25 @@
     "department": "Emergency Communications Division",
     "badgeNumber": "RG-F507",
     "createdAt": "2026-09-17T14:29:45.045088"
+  },
+  {
+    "userId": "usr-1789818785-cc51",
+    "name": "Lt. Test Operator",
+    "email": "test.operator.02699d@rescuegrid.ai",
+    "passwordHash": "$2b$12$cBhejscQBh2LSeCfTT2B9OQrlCdoMunvJyMTmY1.FySjRc9G5ep1G",
+    "role": "DISPATCHER",
+    "department": "Emergency Communications Division",
+    "badgeNumber": "RG-6D9A",
+    "createdAt": "2026-09-19T17:23:05.969834"
+  },
+  {
+    "userId": "usr-1789819813-1dfc",
+    "name": "Test",
+    "email": "siddharthtiwary726@gmail.com",
+    "passwordHash": "$2b$12$dTNOT9lEpgeUomHS4Cop0eRv69tyVZeBhVDGUvUGLIfD1RRmhIr22",
+    "role": "COMMANDER_OPERATOR",
+    "department": "Emergency Operations Command",
+    "badgeNumber": "RG-6E78",
+    "createdAt": "2026-09-19T17:40:13.751552"
   }
 ]
